@@ -14,21 +14,16 @@ def main():
 #     access_secret = environ['ACCESS_SECRET']
 
     from os import environ
-    twitter_auth_keys = {
-        "consumer_key"        : consumer_key = environ['CONSUMER_KEY'],
-        "consumer_secret"     : consumer_secret = environ['CONSUMER_SECRET'],
-        "access_token"        : access_key = environ['ACCESS_KEY'],
-        "access_token_secret" : access_secret = environ['ACCESS_SECRET']
-    }
- 
-    auth = tweepy.OAuthHandler(
-            twitter_auth_keys['consumer_key'],
-            twitter_auth_keys['consumer_secret']
-            )
-    auth.set_access_token(
-            twitter_auth_keys['access_token'],
-            twitter_auth_keys['access_token_secret']
-            )
+    CONSUMER_KEY = environ['CONSUMER_KEY']
+    CONSUMER_SECRET = environ['CONSUMER_SECRET']
+    ACCESS_KEY = environ['ACCESS_KEY']
+    ACCESS_SECRET = environ['ACCESS_SECRET']
+
+#    INTERVAL = 60 * 60 * 6  # tweet every 6 hours
+    # INTERVAL = 15  # every 15 seconds, for testing
+
+    auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+    auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
     api = tweepy.API(auth)
    
 #    path = r"pics"
