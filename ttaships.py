@@ -39,7 +39,7 @@ def main():
 
  
     # Post tweet with image
-    tweet = "This TTA ship does not exist"
+    tweet = "This TTA ship does not exist #LookingGlassAI"
     post_result = api.update_status(status=tweet, media_ids=[media.media_id])
 
     os.remove(path+"/"+image) 
