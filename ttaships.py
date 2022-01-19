@@ -5,12 +5,7 @@ import os, random
 def main():
 
 # from credentials import *  # use this one for testing
-    twitter_auth_keys = {
-        "consumer_key"        : "cQoQoUghaU1PO5NBf4UipF1J3",
-        "consumer_secret"     : "0XW69g2a21aaQbBR2LxU4NhdcSo53hMAAltEk1aoCVdeiQofyq",
-        "access_token"        : "1481148408664834049-anmMzMGywTkiPpDVgZHIXUZswBTvtl",
-        "access_token_secret" : "x91Z6OrJu0bJcEHdhBhIfIdYKjs9k1uEdTv5V7ljrrA2r"
-    }
+
     
 # use this for production; set vars in heroku dashboard
 #    consumer_key = environ['CONSUMER_KEY']
@@ -18,13 +13,13 @@ def main():
 #    access_key = environ['ACCESS_KEY']
 #     access_secret = environ['ACCESS_SECRET']
 
-##    from os import environ
-##    twitter_auth_keys = {
-##        "consumer_key"        : consumer_key = environ['CONSUMER_KEY'],
-##        "consumer_secret"     : consumer_secret = environ['CONSUMER_SECRET'],
-##        "access_token"        : access_key = environ['ACCESS_KEY'],
-##        "access_token_secret" : access_secret = environ['ACCESS_SECRET']
-##    }
+    from os import environ
+    twitter_auth_keys = {
+        "consumer_key"        : consumer_key = environ['CONSUMER_KEY'],
+        "consumer_secret"     : consumer_secret = environ['CONSUMER_SECRET'],
+        "access_token"        : access_key = environ['ACCESS_KEY'],
+        "access_token_secret" : access_secret = environ['ACCESS_SECRET']
+    }
  
     auth = tweepy.OAuthHandler(
             twitter_auth_keys['consumer_key'],
