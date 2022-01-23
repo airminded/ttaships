@@ -46,7 +46,7 @@ def main():
     tweet = name+" #LookingGlassAI"
     post_result = api.update_status(status=tweet, media_ids=[media.media_id])
 
-    os.remove(path+"/"+image) 
+#    os.remove(path+"/"+image) 
 	
 if __name__ == "__main__":
     main()
