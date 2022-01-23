@@ -37,9 +37,13 @@ def main():
     # Upload image
     media = api.media_upload(path+"/"+image)
 
+    # Generate ship name
+    rawname = random.choice(open('names.txt').readlines())
+    name = rawname.rstrip()
  
     # Post tweet with image
-    tweet = "This TTA ship does not exist #LookingGlassAI"
+#    tweet = "This TTA ship does not exist #LookingGlassAI"
+    tweet = name+" #LookingGlassAI"
     post_result = api.update_status(status=tweet, media_ids=[media.media_id])
 
     os.remove(path+"/"+image) 
