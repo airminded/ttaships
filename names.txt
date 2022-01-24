@@ -68,8 +68,6 @@ Gemini
 Monarch
 Nemesis
 Tyrant
-Cannig Tol
-Cannig Tol 2
 Canopus
 Aldebrecht 24b
 Dorado
@@ -138,7 +136,6 @@ Pulsar
 Gemini
 Thero
 Aurora
-Kurt Austin
 Milo
 Rama
 Serena
