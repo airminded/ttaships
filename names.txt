@@ -1,153 +1,129 @@
-Zalem
-Zempaph
-Zodiac
-Zodiac Elite
-Starship Orion
-Zoom
-Aurora
-Sun Key
-Gemini
-Zorro
-CA 1992 Aquarius
-Stingray
-Stinger
+Aldebrecht 24b
+Alpha
+Anthropos
+Arrow
+Arthog
 Aster
-Daring
+Aurora
+Babette
+Balalaika
+Banshee
+Bella
+Betakatana
+Bucklund 309
+Budu Warrior
+CA 1992 Aquarius
 Cannibal
-Dorado
-Thero
-Trevillian
-Wrecker
-Nova
-Strat
-Kruppe
+Canopus
 Carnatic
 Carnatic Mk. II
 Carnatic Mk. III
+Caryad
+Crescent
+Daring
+Dorado
+Eris
+Fenrir
+Fistol
+Galax
 Gemini
-Ticonderoga
-Rama
-Umbrella
-Liberty Express
+Gruntle
+Hedgehog
 Hercule
-Hornblower
 Hercules
-Tholma
-Arthog
-Carnatic
+Hornblower
+Husseins Tarpan
+Icarus II
+Kallor
+Kallor
+Keruli
+Korana
+Korana Sela
+Korbal Broach
+Korlat
+Korlat M1
+Korlat M2
+Korlat M3
+Kruppe
+Lada
+Lemdhel
+Lemini
+Lestat
+Lestat's Cutlass
+Liberty Express
+Livonia
+Lord Nand
+Luna
+Lyrandar
+Maggie
+Makarov
+Megara
+Methanon
+Mira
+Monarch
+Moonshot
+Mordor
+Nemesis
+Nexus
+Nova
+Nova Miriam
+Nova Prime
+Nova Rebirth
+Nova Revive
+NUMA Special Operations Craft
+Object #10 Antares
+Object #13 Lyra
+Object #15
+Object #7 Alpha Centauri
+Odin
+Olympia
+Omega
+Omega II
+Owyn
+Pandora
+Pegasus
+Pioneer
+Pleione
+Plutonia
+Polaris
+Pulsar
+Rama
+Regulus
+Retribution
+Scarlet
+Scorpiion
+Scorpion
+Sedna
+Serena
+Sovereign
+Starship Orion
+Stinger
+Stingray
+Strat
+Sun Key
+The Black Moranth
+The Hounds
+The Last
+The Other Sirius
+The Six
 Thero
 Thero's Daughter
 Thero's Experiment
 Thero's Eye
 Thero's Ghost
-Babette
-Omega II
-Icarus II
-Scorpiion
-Torvald
-Gruntle
-Korlat
-Korlat M1
-Korlat M2
-Korlat M3
-Lestat
-Lestat's Cutlass
-Tucana
-Gemini
-Maggie
-Omega
-Pioneer
-Regulus
-Retribution
-Livonia
-Eris
-Pegasus
-Sedna
-Galax
-Gemini
-Monarch
-Nemesis
-Tyrant
-Canopus
-Aldebrecht 24b
-Dorado
-Mira
+Tholma
 Thorn
-Fenrir
+Ticonderoga
 Titan
-Luna
-Mordor
-Megara
-Kallor
-Lada
-Balalaika
-Banshee
-Caryad
-Korana
-Korana Sela
-The Other Sirius
-Nova
-Nexus
-Rama
-Gemini
-Lemini
-Alpha
-Betakatana
-Dorado
-Crescent
-Scorpion
-Carnatic
-Methanon
-Arrow
-Budu Warrior
-Fistol
-Object #7 Alpha Centauri
-Object #10 Antares
-Object #13 Lyra
-Object #15
-Bucklund 309
-Keruli
-The Black Moranth
-Korbal Broach
-The Hounds
-Kallor
-Thorn
-Lord Nand
-Olympia
-Owyn
-Pandora
-Scarlet
-Gemini
-Polaris
-Plutonia
-The Last
-Nova
-Nova Prime
-Nova Revive
-Nova Rebirth
-Nova Miriam
-Hedgehog
-Moonshot
-Rama
-Husseins Tarpan
-Pleione
-Luna
-Pulsar
-Gemini
-Thero
-Aurora
-Milo
-Rama
-Serena
-Gemini
+Torvald
+Trevillian
+Tucana
+Tyrant
+Umbrella
+Wrecker
+Zalem
+Zempaph
 Zodiac
-Makarov
-NUMA Special Operations Craft
-Anthropos
-Nova
-Lemdhel
-Lyrandar
-Odin
-Bella
-Sovereign
-The Six
+Zodiac Elite
+Zoom
+Zorro
