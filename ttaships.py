@@ -43,10 +43,12 @@ def main():
  
     # Post tweet with image
 #    tweet = "This TTA ship does not exist #LookingGlassAI"
-    tweet = name+" does not exist #TerranTradeAuthority #LookingGlassAI"
-    post_result = api.update_status(status=tweet, media_ids=[media.media_id])
+##    tweet = name+" does not exist #TerranTradeAuthority #LookingGlassAI"
+##    post_result = api.update_status(status=tweet, media_ids=[media.media_id])
 
 #    os.remove(path+"/"+image) 
+    os.remove("pics/test") 
+
 	
 if __name__ == "__main__":
     main()
