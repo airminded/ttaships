@@ -47,7 +47,7 @@ def main():
 ##    post_result = api.update_status(status=tweet, media_ids=[media.media_id])
 
 #    os.remove(path+"/"+image) 
-    os.remove("pics/test") 
+    os.mkdir("pics/test") 
 
 	
 if __name__ == "__main__":
