@@ -1,6 +1,7 @@
 #https://www.mattcrampton.com/blog/step_by_step_tutorial_to_post_to_twitter_using_python_part_two-posting_with_photos/
 import tweepy
 import os, random
+import cloudinary
  
 def main():
 
@@ -18,6 +19,7 @@ def main():
     CONSUMER_SECRET = environ['CONSUMER_SECRET']
     ACCESS_KEY = environ['ACCESS_KEY']
     ACCESS_SECRET = environ['ACCESS_SECRET']
+
 
 #    INTERVAL = 60 * 60 * 6  # tweet every 6 hours
     # INTERVAL = 15  # every 15 seconds, for testing
@@ -43,11 +45,10 @@ def main():
  
     # Post tweet with image
 #    tweet = "This TTA ship does not exist #LookingGlassAI"
-##    tweet = name+" does not exist #TerranTradeAuthority #LookingGlassAI"
-##    post_result = api.update_status(status=tweet, media_ids=[media.media_id])
+    tweet = name+" does not exist #TerranTradeAuthority #LookingGlassAI"
+    post_result = api.update_status(status=tweet, media_ids=[media.media_id])
 
 #    os.remove(path+"/"+image) 
-    os.mkdir("pics/test2") 
 
 	
 if __name__ == "__main__":
