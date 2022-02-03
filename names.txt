@@ -2,33 +2,25 @@ Aldebrecht 24b
 Alpha
 Anthropos
 Arrow
-Arthog
 Aster
 Aurora
 Babette
 Balalaika
-Banshee
 Bella
 Betakatana
-Bucklund 309
 Budu Warrior
-CA 1992 Aquarius
 Cannibal
 Canopus
 Carnatic
 Carnatic Mk. II
 Carnatic Mk. III
 Caryad
-Crescent
 Daring
 Dorado
 Eris
-Fenrir
 Fistol
 Galax
-Gemini
 Gruntle
-Hedgehog
 Hercule
 Hercules
 Hornblower
@@ -36,93 +28,64 @@ Husseins Tarpan
 Icarus II
 Kallor
 Keruli
-Korana
 Korana Sela
 Korbal Broach
 Korlat
 Korlat M1
 Korlat M2
-Korlat M3
 Kruppe
 Lada
 Lemdhel
 Lemini
-Lestat
-Lestat's Cutlass
-Liberty Express
 Livonia
 Lord Nand
-Luna
 Lyrandar
-Maggie
-Makarov
 Megara
-Methanon
 Mira
 Monarch
-Moonshot
-Mordor
 Nemesis
-Nexus
-Nova
 Nova Miriam
 Nova Prime
-Nova Rebirth
 Nova Revive
 NUMA Special Operations Craft
 Object #10 Antares
 Object #13 Lyra
-Object #15
 Object #7 Alpha Centauri
 Odin
-Olympia
 Omega
-Omega II
 Owyn
 Pandora
-Pegasus
 Pioneer
 Pleione
 Plutonia
 Polaris
 Pulsar
-Rama
 Regulus
 Retribution
-Scarlet
 Scorpiion
-Scorpion
-Sedna
 Serena
 Sovereign
-Starship Orion
 Stinger
 Stingray
 Strat
 Sun Key
 The Black Moranth
 The Hounds
-The Last
 The Other Sirius
 The Six
 Thero
 Thero's Daughter
 Thero's Experiment
-Thero's Eye
 Thero's Ghost
 Tholma
 Thorn
 Ticonderoga
 Titan
-Torvald
 Trevillian
 Tucana
 Tyrant
 Umbrella
-Wrecker
-Zalem
 Zempaph
 Zodiac
 Zodiac Elite
 Zoom
-Zorro
