@@ -22,17 +22,14 @@ Fistol
 Galax
 Gruntle
 Hercule
-Hercules
 Hornblower
 Husseins Tarpan
 Icarus II
-Kallor
 Keruli
 Korana Sela
 Korbal Broach
 Korlat
 Korlat M1
-Korlat M2
 Kruppe
 Lada
 Lemdhel
@@ -59,11 +56,9 @@ Pioneer
 Pleione
 Plutonia
 Polaris
-Pulsar
 Regulus
 Retribution
 Scorpiion
-Serena
 Sovereign
 Stinger
 Stingray
@@ -74,7 +69,6 @@ The Hounds
 The Other Sirius
 The Six
 Thero
-Thero's Daughter
 Thero's Experiment
 Thero's Ghost
 Tholma
