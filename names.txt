@@ -44,11 +44,9 @@ Nemesis
 Nova Miriam
 Nova Prime
 Nova Revive
-NUMA Special Operations Craft
 Object #10 Antares
 Object #13 Lyra
 Object #7 Alpha Centauri
-Odin
 Omega
 Owyn
 Pandora
@@ -80,6 +78,5 @@ Tucana
 Tyrant
 Umbrella
 Zempaph
-Zodiac
 Zodiac Elite
 Zoom
