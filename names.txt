@@ -1,8 +1,5 @@
-Aldebrecht 24b
 Alpha
 Anthropos
-Arrow
-Aster
 Aurora
 Babette
 Balalaika
@@ -16,24 +13,19 @@ Carnatic Mk. II
 Carnatic Mk. III
 Caryad
 Daring
-Dorado
 Eris
 Fistol
 Galax
 Gruntle
-Hercule
 Hornblower
 Husseins Tarpan
-Icarus II
 Keruli
 Korana Sela
 Korbal Broach
 Korlat
 Korlat M1
 Kruppe
-Lada
 Lemdhel
-Lemini
 Livonia
 Lord Nand
 Lyrandar
@@ -49,7 +41,6 @@ Object #13 Lyra
 Object #7 Alpha Centauri
 Omega
 Owyn
-Pandora
 Pioneer
 Pleione
 Plutonia
@@ -57,11 +48,8 @@ Polaris
 Regulus
 Retribution
 Scorpiion
-Sovereign
 Stinger
-Stingray
 Strat
-Sun Key
 The Black Moranth
 The Hounds
 The Other Sirius
