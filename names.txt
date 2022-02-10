@@ -12,18 +12,15 @@ Carnatic
 Carnatic Mk. II
 Carnatic Mk. III
 Caryad
-Daring
 Eris
 Fistol
 Galax
 Gruntle
 Hornblower
-Husseins Tarpan
 Keruli
 Korana Sela
 Korbal Broach
 Korlat
-Korlat M1
 Kruppe
 Lemdhel
 Livonia
@@ -34,7 +31,6 @@ Mira
 Monarch
 Nemesis
 Nova Miriam
-Nova Prime
 Nova Revive
 Object #10 Antares
 Object #13 Lyra
@@ -44,15 +40,11 @@ Owyn
 Pioneer
 Pleione
 Plutonia
-Polaris
 Regulus
 Retribution
 Scorpiion
 Stinger
-Strat
 The Black Moranth
-The Hounds
-The Other Sirius
 The Six
 Thero
 Thero's Experiment
