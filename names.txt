@@ -1,29 +1,23 @@
 Alpha
 Anthropos
-Aurora
 Babette
 Balalaika
 Bella
 Betakatana
-Budu Warrior
-Cannibal
 Canopus
 Carnatic
 Carnatic Mk. II
 Carnatic Mk. III
 Caryad
 Eris
-Fistol
 Galax
 Gruntle
 Hornblower
 Keruli
-Korana Sela
 Korbal Broach
 Korlat
 Kruppe
 Lemdhel
-Livonia
 Lord Nand
 Lyrandar
 Megara
@@ -34,24 +28,18 @@ Nova Miriam
 Nova Revive
 Object #10 Antares
 Object #13 Lyra
-Object #7 Alpha Centauri
 Omega
-Owyn
 Pioneer
 Pleione
 Plutonia
 Regulus
 Retribution
-Scorpiion
 Stinger
 The Black Moranth
 The Six
 Thero
-Thero's Experiment
 Thero's Ghost
-Tholma
 Thorn
-Ticonderoga
 Titan
 Trevillian
 Tucana
