@@ -1,5 +1,4 @@
 Alpha
-Anthropos
 Babette
 Balalaika
 Bella
@@ -42,7 +41,6 @@ Thero's Ghost
 Thorn
 Titan
 Trevillian
-Tucana
 Tyrant
 Umbrella
 Zempaph
