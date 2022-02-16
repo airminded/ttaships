@@ -1,40 +1,135 @@
-Alpha
+Abaddon
+Airlock
+Amadeus
+Aquarius
+Argentina
+Asteroid Redirect
+Astro Boy
+Astronaut
+Atomic Redirect
+Avatar
 Babette
+Backup
 Balalaika
+Barbara
+Bat
+Battle Automaton
 Bella
 Betakatana
+Big Papi
+Big Papi 2
+Big Red
+Big Red 2
+Big Red 3
+Black Giana
+Black Giana Mk. II
+Black Giana Mk. III
+Bluepearl
+Bora
+Bora-X
+Butterfly
+Cadrelle
+Cain
 Canopus
+Caprice
+Captain
+Caracalla
 Carnatic
 Carnatic Mk. II
 Carnatic Mk. III
 Caryad
+Chance
+Charity
+Charm
+Chipper
+Chirp
+Chloe
+Chocol
+Chroma
+Chromium
+Cindel
+Cindelian Guard
+Cinder
+Citadel
+Cleaner
+Cleopatra
+Cleopatra 2
+Cleopatra 3
+Clever
+Clorinda
+Clorinda 2
+Druid
 Eris
+Federation Starship Andromeda
 Galax
+Ghoul King
+Gigantopithecus
+Goliath
 Gruntle
 Hornblower
+Ido
+Kai
 Keruli
 Korbal Broach
 Korlat
+Korlat's Carac
+Korlat's Rover
+Koyee
 Kruppe
 Lemdhel
+Lemprière 24B
+Lemprière 24B2
+Liss
 Lord Nand
-Lyrandar
+Lunatic
+Maggie
 Megara
-Mira
-Monarch
+Muse Alpha
+Muse Beta
+Muse Delta
+Muse Epsilon
+Muse Eta
+Muse Gamma
+Muse Zeta
+Nand's Toss
 Nemesis
+Nemesis
+Nighthawk
 Nova Miriam
 Nova Revive
 Object #10 Antares
 Object #13 Lyra
+Olar Shayn
 Omega
+Oriantha
+Phoenix
 Pioneer
+Pirate
 Pleione
+Plunder
 Plutonia
+Queen of Chaos
+Queen of Dreams
+Queen of Pain
+Queen of the Damned
+Queen of the Fading Dream
+Raider
+Rayner
+Reaper
+Redfox
 Regulus
 Retribution
+Saturn's Children
+Serena
+Shi Chiren
+Shy Raven
+Sovereign
 Stinger
+Sun King
+Sun Queen
 The Black Moranth
+The Last Outpost
+The Lost Planet
 The Six
 Thero
 Thero's Ghost
@@ -42,7 +137,9 @@ Thorn
 Titan
 Trevillian
 Tyrant
-Umbrella
+Unicorn
+Zalem
+Zalem Express
 Zempaph
 Zodiac Elite
 Zoom
