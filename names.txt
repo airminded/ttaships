@@ -1,4 +1,3 @@
-Abaddon
 Airlock
 Amadeus
 Aquarius
@@ -24,7 +23,6 @@ Big Red 3
 Black Giana
 Black Giana Mk. II
 Black Giana Mk. III
-Bluepearl
 Bora
 Bora-X
 Butterfly
@@ -97,12 +95,10 @@ Nemesis
 Nighthawk
 Nova Miriam
 Nova Revive
-Object #10 Antares
 Object #13 Lyra
 Olar Shayn
 Omega
 Oriantha
-Phoenix
 Pioneer
 Pirate
 Pleione
