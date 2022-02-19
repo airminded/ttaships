@@ -31,13 +31,6 @@ def main():
     auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
     api = tweepy.API(auth)
    
-##    path = r"pics"
-    path = "pics"
-#    image = random.choice([
-#        x for x in os.listdir(path)
-#        if os.path.isfile(os.path.join(path, x))
-#    ])
-#    print(image)
     
     # get image from cloudinary
     out = cloudinary.api.resources(type = "upload")
@@ -45,21 +38,18 @@ def main():
 
     upper=length-1
     rando = random.randrange(0,upper)
-    blah=out['resources'][rando]['public_id']
+    name=out['resources'][rando]['public_id']
     image=out['resources'][rando]['asset_id']
-    print(blah)
+    print(name)
     url=out['resources'][rando]['url']
-    print(url)
     r = requests.get(url)
     #retrieving data from the URL using get method
     with open(image, 'wb') as f:
         f.write(r.content) 
-    cloudinary.uploader.destroy(blah)
-
+    cloudinary.uploader.destroy(name)
 
     # Upload image
     media = api.media_upload(image)
-#    api.media_upload(image)
     api.media_upload(image)
 
 

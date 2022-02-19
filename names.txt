@@ -2,7 +2,6 @@ Airlock
 Aquarius
 Argentina
 Asteroid Redirect
-Astro Boy
 Astronaut
 Atomic Redirect
 Avatar
@@ -93,7 +92,6 @@ Nova Miriam
 Nova Revive
 Object #13 Lyra
 Olar Shayn
-Omega
 Oriantha
 Pioneer
 Pirate
