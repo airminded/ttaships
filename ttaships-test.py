@@ -54,7 +54,7 @@ def main():
     #retrieving data from the URL using get method
     with open(image, 'wb') as f:
         f.write(r.content) 
-###    cloudinary.uploader.destroy(blah)
+    cloudinary.uploader.destroy(blah)
 
 
     # Upload image
