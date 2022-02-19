@@ -53,7 +53,7 @@ def main():
     r = requests.get(url)
     #retrieving data from the URL using get method
     with open(image, 'wb') as f:
-        f.write(path+"/"+r.content) 
+        f.write(r.content) 
 ###    cloudinary.uploader.destroy(blah)
 
 
