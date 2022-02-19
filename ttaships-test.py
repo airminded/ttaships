@@ -1,7 +1,7 @@
 #https://www.mattcrampton.com/blog/step_by_step_tutorial_to_post_to_twitter_using_python_part_two-posting_with_photos/
 import tweepy
 import os, random
-import cloudinary,cloudinary.api
+import cloudinary,cloudinary.api,cloudinary.uploader
 import requests
  
 def main():
