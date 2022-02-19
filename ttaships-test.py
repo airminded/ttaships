@@ -46,7 +46,7 @@ def main():
     upper=length-1
     rando = random.randrange(0,upper)
     blah=out['resources'][rando]['public_id']
-   image=out['resources'][rando]['asset_id']
+    image=out['resources'][rando]['asset_id']
     print(blah)
     url=out['resources'][rando]['url']
     print(url)
