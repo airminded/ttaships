@@ -58,7 +58,7 @@ def main():
 
 
     # Upload image
-#    media = api.media_upload(path+"/"+image)
+    media = api.media_upload(image)
 #    api.media_upload(image)
     api.media_upload(image)
 
