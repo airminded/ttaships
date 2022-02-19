@@ -1,5 +1,4 @@
 Airlock
-Amadeus
 Aquarius
 Argentina
 Asteroid Redirect
@@ -22,7 +21,6 @@ Big Red 2
 Big Red 3
 Black Giana
 Black Giana Mk. II
-Black Giana Mk. III
 Bora
 Bora-X
 Butterfly
@@ -54,7 +52,6 @@ Cleopatra
 Cleopatra 2
 Cleopatra 3
 Clever
-Clorinda
 Clorinda 2
 Druid
 Eris
@@ -62,7 +59,6 @@ Federation Starship Andromeda
 Galax
 Ghoul King
 Gigantopithecus
-Goliath
 Gruntle
 Hornblower
 Ido

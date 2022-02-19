@@ -1,2 +1,2 @@
 web: python server.py
-worker: python ttaships.py
+worker: python ttaships-test.py
