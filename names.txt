@@ -11,13 +11,10 @@ Balalaika
 Barbara
 Bat
 Battle Automaton
-Bella
-Betakatana
 Big Papi
 Big Papi 2
 Big Red
 Big Red 2
-Big Red 3
 Black Giana
 Black Giana Mk. II
 Bora
@@ -31,7 +28,6 @@ Captain
 Caracalla
 Carnatic
 Carnatic Mk. II
-Carnatic Mk. III
 Caryad
 Chance
 Charity
@@ -43,10 +39,8 @@ Chocol
 Chroma
 Chromium
 Cindel
-Cindelian Guard
 Cinder
 Citadel
-Cleaner
 Cleopatra
 Cleopatra 2
 Cleopatra 3
@@ -58,8 +52,6 @@ Federation Starship Andromeda
 Galax
 Ghoul King
 Gigantopithecus
-Gruntle
-Hornblower
 Ido
 Kai
 Keruli
@@ -82,7 +74,6 @@ Muse Beta
 Muse Delta
 Muse Epsilon
 Muse Eta
-Muse Gamma
 Muse Zeta
 Nand's Toss
 Nemesis
@@ -97,13 +88,11 @@ Pioneer
 Pirate
 Pleione
 Plunder
-Plutonia
 Queen of Chaos
 Queen of Dreams
 Queen of Pain
 Queen of the Damned
 Queen of the Fading Dream
-Raider
 Rayner
 Reaper
 Redfox
