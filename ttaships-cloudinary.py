@@ -33,7 +33,8 @@ def main():
    
     
     # get image from cloudinary
-    out = cloudinary.api.resources(type = "upload")
+    # max_results = 500 is the max, otherwise defaults to 10
+    out = cloudinary.api.resources(type = "upload", max_results=500)
     length = len(out['resources'])
     print(length)
 
