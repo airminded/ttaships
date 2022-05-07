@@ -36,12 +36,9 @@ def main():
     # max_results = 500 is the max, otherwise defaults to 10
     out = cloudinary.api.resources(type = "upload", max_results=500)
     length = len(out['resources'])
-    print(length)
-
     upper=length-1
-    print(upper)
     rando = random.randrange(0,upper)
-    print(rando)
+    print('filename %s' rando)
     name=out['resources'][rando]['public_id']
     image=out['resources'][rando]['asset_id']
     print(name)
