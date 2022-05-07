@@ -41,8 +41,7 @@ def main():
     name=out['resources'][rando]['public_id']
     image=out['resources'][rando]['asset_id']
     txtname = 'image name: ' + str(name)
-    print(txtrando)
-    print(name)
+    print(txtname)
     url=out['resources'][rando]['url']
     r = requests.get(url)
     #retrieving data from the URL using get method
