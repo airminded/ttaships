@@ -35,9 +35,12 @@ def main():
     # get image from cloudinary
     out = cloudinary.api.resources(type = "upload")
     length = len(out['resources'])
+    print(length)
 
     upper=length-1
+    print(upper)
     rando = random.randrange(0,upper)
+    print(rando)
     name=out['resources'][rando]['public_id']
     image=out['resources'][rando]['asset_id']
     print(name)
@@ -59,7 +62,7 @@ def main():
  
     # Post tweet with image
 #    tweet = "This TTA ship does not exist #LookingGlassAI"
-    tweet = name+" does not exist #TerranTradeAuthority #LookingGlassAI"
+    tweet = name+" does not exist #TerranTradeAuthority"
     post_result = api.update_status(status=tweet, media_ids=[media.media_id])
 
 #    os.remove(path+"/"+image) 
