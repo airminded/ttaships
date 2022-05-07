@@ -38,10 +38,10 @@ def main():
     length = len(out['resources'])
     upper=length-1
     rando = random.randrange(0,upper)
-    txtrando = 'image name: ' + str(rando)
-    print(txtrando)
     name=out['resources'][rando]['public_id']
     image=out['resources'][rando]['asset_id']
+    txtname = 'image name: ' + str(name)
+    print(txtrando)
     print(name)
     url=out['resources'][rando]['url']
     r = requests.get(url)
