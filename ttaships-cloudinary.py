@@ -38,7 +38,7 @@ def main():
     length = len(out['resources'])
     upper=length-1
     rando = random.randrange(0,upper)
-    print('filename %s' rando)
+    print('image name: ' + rando)
     name=out['resources'][rando]['public_id']
     image=out['resources'][rando]['asset_id']
     print(name)
