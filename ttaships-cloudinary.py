@@ -43,13 +43,6 @@ def main():
     txtname = 'image name: ' + str(name)
     print(txtname)
     ainame=txtname[12:15]
-    mjcheck='mj-'
-    print(ainame)
-#    print(ainame == 'mj-')
-#    if ainame == mjcheck:
-#        print('mj: yes')
-#    else:
-#    	print('mj: no')
     if ainame == 'mj-':
         aihashtag = '#midjourney'
     elif ainame == 'da-':
@@ -75,7 +68,7 @@ def main():
  
     # Post tweet with image
 #    tweet = "This TTA ship does not exist #LookingGlassAI"
-    tweet = name+" does not exist #TerranTradeAuthority"
+    tweet = name+" does not exist #TerranTradeAuthority "+aihashtag
     post_result = api.update_status(status=tweet, media_ids=[media.media_id])
 
 #    os.remove(path+"/"+image) 
