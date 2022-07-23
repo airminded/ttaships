@@ -42,7 +42,7 @@ def main():
     image=out['resources'][rando]['asset_id']
     txtname = 'image name: ' + str(name)
     print(txtname)
-    ainame=txtname[13:14]
+    ainame=txtname[12:15]
     print(ainame)
     url=out['resources'][rando]['url']
     r = requests.get(url)
