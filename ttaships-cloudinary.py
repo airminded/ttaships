@@ -46,16 +46,17 @@ def main():
     mjcheck='mj-'
     print(ainame)
 #    print(ainame == 'mj-')
-    if ainame == mjcheck:
-        print('mj: yes')
-    else:
-    	print('mj: no')
-#    if ainame == 'mj-'
-#        then aihashtag = '#midjourney'
-#    elif ainame == 'da-'
-#        then aihashtag = '#dalle2'
-#    else aihashtag = '#LookingGlassAI'
-#    print(aihashtag)
+#    if ainame == mjcheck:
+#        print('mj: yes')
+#    else:
+#    	print('mj: no')
+    if ainame == 'mj-':
+        aihashtag = '#midjourney'
+    elif ainame == 'da-':
+        aihashtag = '#dalle2'
+    else: 
+    	aihashtag = '#LookingGlassAI'
+    print(aihashtag)
     url=out['resources'][rando]['url']
     r = requests.get(url)
     #retrieving data from the URL using get method
