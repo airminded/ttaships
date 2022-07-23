@@ -44,12 +44,13 @@ def main():
     print(txtname)
     ainame=txtname[12:15]
     print(ainame)
-    if ainame == 'mj-'
-        then aihashtag = '#midjourney'
-    elif ainame == 'da-'
-        then aihashtag = '#dalle2'
-    else aihashtag = '#LookingGlassAI'
-    print(aihashtag)
+    print(ainame == 'mj-')
+#    if ainame == 'mj-'
+#        then aihashtag = '#midjourney'
+#    elif ainame == 'da-'
+#        then aihashtag = '#dalle2'
+#    else aihashtag = '#LookingGlassAI'
+#    print(aihashtag)
     url=out['resources'][rando]['url']
     r = requests.get(url)
     #retrieving data from the URL using get method
