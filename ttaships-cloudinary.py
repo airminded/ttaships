@@ -47,9 +47,9 @@ def main():
     print(ainame)
 #    print(ainame == 'mj-')
     if ainame == mjcheck:
-        print 'mj: yes'
+        print('mj: yes')
     else:
-    	print 'mj: no'
+    	print('mj: no')
 #    if ainame == 'mj-'
 #        then aihashtag = '#midjourney'
 #    elif ainame == 'da-'
