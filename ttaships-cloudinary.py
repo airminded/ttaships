@@ -44,7 +44,11 @@ def main():
     print(txtname)
     ainame=txtname[12:15]
     print(ainame)
-    print(ainame == 'mj-')
+#    print(ainame == 'mj-')
+    if ainame == 'mj-'
+        print 'mj: yes'
+    else
+    	print 'mj: no'
 #    if ainame == 'mj-'
 #        then aihashtag = '#midjourney'
 #    elif ainame == 'da-'
