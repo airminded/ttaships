@@ -43,9 +43,10 @@ def main():
     txtname = 'image name: ' + str(name)
     print(txtname)
     ainame=txtname[12:15]
+    mjcheck='mj-'
     print(ainame)
 #    print(ainame == 'mj-')
-    if ainame == 'mj-'
+    if ainame == mjcheck
         print 'mj: yes'
     else
     	print 'mj: no'
