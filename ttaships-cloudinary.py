@@ -45,8 +45,8 @@ def main():
     ainame=txtname[12:15]
     if ainame == 'mj-':
         aihashtag = '#midjourney'
-    elif ainame == 'da-':
-        aihashtag = '#dalle2'
+    elif ainame == 'sd-':
+        aihashtag = '#StableDiffusion'
     else: 
     	aihashtag = '#LookingGlassAI'
     print(aihashtag)
