@@ -1,1 +1,1 @@
-worker: python ttaships-cloudinary.py
+worker: python ttaships.py
