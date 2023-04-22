@@ -29,6 +29,13 @@ def main():
         access_token=MASTODON_TOKEN,
         api_base_url=MASTODON_INSTANCE
     )
+    
+    # Authenticate to Mastodon
+    mastodon = Mastodon(
+        access_token=MASTODON_TOKEN,
+        api_base_url=f"https://{MASTODON_INSTANCE}"
+    )
+
    
     
     # get image from cloudinary
