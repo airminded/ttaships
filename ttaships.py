@@ -19,12 +19,6 @@ def main():
     auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
     auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
     api = tweepy.API(auth)
-	
-	# Set up Mastodon API
-	#mastodon = Mastodon(
-    #    access_token=MASTODON_TOKEN,
-    #    api_base_url=MASTODON_INSTANCE
-	#)
     
     # Authenticate to Mastodon
   	mastodon = Mastodon(
@@ -34,8 +28,6 @@ def main():
         api_base_url=MASTODON_BASE_URL
     )
 
-   
-    
     # get image from cloudinary
     # max_results = 500 is the max, otherwise defaults to 10
     out = cloudinary.api.resources(type = "upload", max_results=500)
