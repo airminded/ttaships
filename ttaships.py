@@ -19,10 +19,6 @@ def main():
     auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
     auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
     api = tweepy.API(auth)
-    
-    ## Mastodon API config
-	#token = "42OYj5JGGkKwQQhTPIGdxziueMHE9fyfJ8Sbqc-joIM"
-	#instance = "botsin.space"
 	
 	# Set up Mastodon API
     mastodon = Mastodon(
@@ -31,9 +27,11 @@ def main():
     )
     
     # Authenticate to Mastodon
-    mastodon = Mastodon(
-        access_token=MASTODON_TOKEN,
-        api_base_url=f"https://{MASTODON_INSTANCE}"
+  	mastodon = Mastodon(
+        client_id=MASTODON_CLIENT_ID,
+        client_secret=MASTODON_CLIENT_SECRET,
+        access_token=MASTODON_ACCESS_TOKEN,
+        api_base_url=MASTODON_BASE_URL
     )
 
    
@@ -78,9 +76,14 @@ def main():
     post_result = api.update_status(status=tweet, media_ids=[media.media_id])
     
     # post to Mastodon with image
-    media = mastodon.media_post(image_path)
-    toot = name+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
-    mastodon.status_post(status=toot, media_ids=[media['id']])
+    #media = mastodon.media_post(image_path)
+    #toot = name+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
+    #mastodon.status_post(status=toot, media_ids=[media['id']])
+
+
+	toot = name+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
+    mastodon.media_post(image)
+    mastodon.status_post(toot, media_ids=[mastodon.media_post(image)['id']])
 
     
     def tweet(message):
