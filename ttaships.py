@@ -3,6 +3,7 @@ import tweepy
 import os, random
 import cloudinary,cloudinary.api,cloudinary.uploader
 import requests
+from mastodon import Mastodon
  
 def main():
 
@@ -12,10 +13,22 @@ def main():
     ACCESS_KEY = environ['ACCESS_KEY']
     ACCESS_SECRET = environ['ACCESS_SECRET']
     CLOUDINARY_URL = environ['CLOUDINARY_URL']
-
+    MASTODON_TOKEN = environ['MASTODON_TOKEN']
+    MASTODON_INSTANCE = environ['MASTODON_INSTANCE']
+    
     auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
     auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
     api = tweepy.API(auth)
+    
+    ## Mastodon API config
+	#token = "42OYj5JGGkKwQQhTPIGdxziueMHE9fyfJ8Sbqc-joIM"
+	#instance = "botsin.space"
+	
+	# Set up Mastodon API
+    mastodon = Mastodon(
+        access_token=MASTODON_TOKEN,
+        api_base_url=MASTODON_INSTANCE
+    )
    
     
     # get image from cloudinary
@@ -53,9 +66,27 @@ def main():
     rawname = random.choice(open('names.txt').readlines())
     name = rawname.rstrip()
  
-    # post tweet with image
+    # post to Twitter with image
     tweet = name+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
     post_result = api.update_status(status=tweet, media_ids=[media.media_id])
+    
+    # post to Mastodon with image
+    media = mastodon.media_post(image_path)
+    toot = name+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
+    mastodon.status_post(status=toot, media_ids=[media['id']])
+
+    
+    def tweet(message):
+    url = "https://" + INSTANCE + "/api/v1/statuses"
+    headers =   {
+            'Accept': 'application/json', 
+            'Content-type': 'application/json', 
+            'Authorization': 'Bearer ' + TOKEN
+            }
+    data =      {  'status': message  }
+    response = requests.request(method = "POST", url = url, data = json.dumps(data), headers = headers)
+
+    
 	
 if __name__ == "__main__":
     main()
