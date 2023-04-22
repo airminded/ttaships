@@ -3,7 +3,6 @@ import tweepy
 import os, random
 import cloudinary,cloudinary.api,cloudinary.uploader
 import requests
-from mastodon import Mastodon
  
 def main():
 
@@ -13,21 +12,12 @@ def main():
     ACCESS_KEY = environ['ACCESS_KEY']
     ACCESS_SECRET = environ['ACCESS_SECRET']
     CLOUDINARY_URL = environ['CLOUDINARY_URL']
-    MASTODON_TOKEN = environ['MASTODON_TOKEN']
-    MASTODON_INSTANCE = environ['MASTODON_INSTANCE']
-    
+
     auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
     auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
     api = tweepy.API(auth)
+   
     
-    # Authenticate to Mastodon
-    mastodon = Mastodon(
-        client_id=MASTODON_CLIENT_ID,
-        client_secret=MASTODON_CLIENT_SECRET,
-        access_token=MASTODON_ACCESS_TOKEN,
-        api_base_url=MASTODON_BASE_URL
-    )
-
     # get image from cloudinary
     # max_results = 500 is the max, otherwise defaults to 10
     out = cloudinary.api.resources(type = "upload", max_results=500)
@@ -63,32 +53,9 @@ def main():
     rawname = random.choice(open('names.txt').readlines())
     name = rawname.rstrip()
  
-    # post to Twitter with image
+    # post tweet with image
     tweet = name+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
     post_result = api.update_status(status=tweet, media_ids=[media.media_id])
-    
-    # post to Mastodon with image
-    #media = mastodon.media_post(image_path)
-    #toot = name+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
-    #mastodon.status_post(status=toot, media_ids=[media['id']])
-
-
-	toot = name+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
-    mastodon.media_post(image)
-    mastodon.status_post(toot, media_ids=[mastodon.media_post(image)['id']])
-
-    
-    def tweet(message):
-    url = "https://" + INSTANCE + "/api/v1/statuses"
-    headers =   {
-            'Accept': 'application/json', 
-            'Content-type': 'application/json', 
-            'Authorization': 'Bearer ' + TOKEN
-            }
-    data =      {  'status': message  }
-    response = requests.request(method = "POST", url = url, data = json.dumps(data), headers = headers)
-
-    
 	
 if __name__ == "__main__":
     main()
