@@ -21,10 +21,10 @@ def main():
     api = tweepy.API(auth)
 	
 	# Set up Mastodon API
-    mastodon = Mastodon(
-        access_token=MASTODON_TOKEN,
-        api_base_url=MASTODON_INSTANCE
-    )
+	#mastodon = Mastodon(
+    #    access_token=MASTODON_TOKEN,
+    #    api_base_url=MASTODON_INSTANCE
+	#)
     
     # Authenticate to Mastodon
   	mastodon = Mastodon(
