@@ -59,14 +59,15 @@ def main():
 
     # choose ship name from list
     rawname = random.choice(open('names.txt').readlines())
-    name = rawname.rstrip()
+    shipname = rawname.rstrip()
+    print(shipname)
  
     # post to Twitter with image
-    tweet = name+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
+    tweet = shipname+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
     post_result = api.update_status(status=tweet, media_ids=[media.media_id])
     
     # post to Mastodon with image
-    toot = name+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
+    toot = shipname+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
     mastodon.media_post(image)
     mastodon.status_post(toot, media_ids=[mastodon.media_post(image)['id']])
 
