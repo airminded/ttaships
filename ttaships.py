@@ -44,7 +44,7 @@ def main():
     elif ainame == 'sd-':
         aihashtag = '#StableDiffusion'
     else: 
-        aihashtag = '#LookingGlassAI'
+        aihashtag = ''
     print(aihashtag)
     url=out['resources'][rando]['url']
     r = requests.get(url)
