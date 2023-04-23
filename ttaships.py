@@ -22,7 +22,7 @@ def main():
     api = tweepy.API(auth)
 
     mastodon = Mastodon(
-        client_key=MASTODON_CLIENT_KEY,
+        client_id=MASTODON_CLIENT_KEY,
         client_secret=MASTODON_CLIENT_SECRET,
         access_token=MASTODON_ACCESS_TOKEN,
         api_base_url=MASTODON_BASE_URL
