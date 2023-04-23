@@ -61,15 +61,15 @@ def main():
     rawname = random.choice(open('names.txt').readlines())
     shipname = rawname.rstrip()
     print(shipname)
+    
+    post = shipname+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
  
     # post to Twitter with image
-    tweet = shipname+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
-    post_result = api.update_status(status=tweet, media_ids=[media.media_id])
+    post_result = api.update_status(status=post, media_ids=[media.media_id])
     
     # post to Mastodon with image
-    toot = shipname+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
     mastodon.media_post(image)
-    mastodon.status_post(toot, media_ids=[mastodon.media_post(image)['id']])
+    mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
 
 if __name__ == "__main__":
     main()
