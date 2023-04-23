@@ -17,10 +17,12 @@ def main():
     MASTODON_ACCESS_TOKEN = environ['MASTODON_ACCESS_TOKEN']
     MASTODON_BASE_URL = environ['MASTODON_BASE_URL']
     
+    # Twitter authentication
     auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
     auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
     api = tweepy.API(auth)
 
+    # Mastodon authentication
     mastodon = Mastodon(
         client_id=MASTODON_CLIENT_KEY,
         client_secret=MASTODON_CLIENT_SECRET,
@@ -37,6 +39,7 @@ def main():
     image=out['resources'][rando]['asset_id']
     txtname = 'image name: ' + str(name)
     print(txtname)
+    
     # generate AI model hashtag based on filename prefix
     ainame=txtname[12:15]
     if ainame == 'mj-':
@@ -45,12 +48,14 @@ def main():
         aihashtag = '#StableDiffusion'
     else: 
         aihashtag = ''
-    print(aihashtag)
+    print('AI model: ' + aihashtag)
     url=out['resources'][rando]['url']
     r = requests.get(url)
+    
     # retrieving data from the URL using get method
     with open(image, 'wb') as f:
         f.write(r.content)
+    
     # delete image from cloudinary 
     cloudinary.uploader.destroy(name)
 
@@ -60,8 +65,9 @@ def main():
     # choose ship name from list
     rawname = random.choice(open('names.txt').readlines())
     shipname = rawname.rstrip()
-    print(shipname)
+    print('ship name: ' + shipname)
     
+    # create post text
     post = shipname+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
  
     # post to Twitter with image
