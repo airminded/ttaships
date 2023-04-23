@@ -12,7 +12,7 @@ def main():
     ACCESS_KEY = environ['ACCESS_KEY']
     ACCESS_SECRET = environ['ACCESS_SECRET']
     CLOUDINARY_URL = environ['CLOUDINARY_URL']
-    MASTODON_CLIENT_ID = environ['MASTODON_CLIENT_ID']
+    MASTODON_CLIENT_KEY = environ['MASTODON_CLIENT_KEY']
     MASTODON_CLIENT_SECRET = environ['MASTODON_CLIENT_SECRET']
     MASTODON_ACCESS_TOKEN = environ['MASTODON_ACCESS_TOKEN']
     MASTODON_BASE_URL = environ['MASTODON_BASE_URL']
@@ -22,7 +22,7 @@ def main():
     api = tweepy.API(auth)
 
     mastodon = Mastodon(
-        client_id=MASTODON_CLIENT_ID,
+        client_key=MASTODON_CLIENT_KEY,
         client_secret=MASTODON_CLIENT_SECRET,
         access_token=MASTODON_ACCESS_TOKEN,
         api_base_url=MASTODON_BASE_URL
