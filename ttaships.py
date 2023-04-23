@@ -1,9 +1,9 @@
-#https://www.mattcrampton.com/blog/step_by_step_tutorial_to_post_to_twitter_using_python_part_two-posting_with_photos/
 import tweepy
 import os, random
 import cloudinary,cloudinary.api,cloudinary.uploader
 import requests
- 
+from mastodon import Mastodon
+
 def main():
 
     from os import environ
@@ -12,14 +12,23 @@ def main():
     ACCESS_KEY = environ['ACCESS_KEY']
     ACCESS_SECRET = environ['ACCESS_SECRET']
     CLOUDINARY_URL = environ['CLOUDINARY_URL']
-
+    MASTODON_CLIENT_ID = environ['MASTODON_CLIENT_ID']
+    MASTODON_CLIENT_SECRET = environ['MASTODON_CLIENT_SECRET']
+    MASTODON_ACCESS_TOKEN = environ['MASTODON_ACCESS_TOKEN']
+    MASTODON_BASE_URL = environ['MASTODON_BASE_URL']
+    
     auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
     auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
     api = tweepy.API(auth)
-   
+
+    mastodon = Mastodon(
+        client_id=MASTODON_CLIENT_ID,
+        client_secret=MASTODON_CLIENT_SECRET,
+        access_token=MASTODON_ACCESS_TOKEN,
+        api_base_url=MASTODON_BASE_URL
+    )
     
     # get image from cloudinary
-    # max_results = 500 is the max, otherwise defaults to 10
     out = cloudinary.api.resources(type = "upload", max_results=500)
     length = len(out['resources'])
     upper=length-1
@@ -35,7 +44,7 @@ def main():
     elif ainame == 'sd-':
         aihashtag = '#StableDiffusion'
     else: 
-    	aihashtag = '#LookingGlassAI'
+        aihashtag = '#LookingGlassAI'
     print(aihashtag)
     url=out['resources'][rando]['url']
     r = requests.get(url)
@@ -45,17 +54,21 @@ def main():
     # delete image from cloudinary 
     cloudinary.uploader.destroy(name)
 
-    # upload image to heroku
+    # upload image to Twitter
     media = api.media_upload(image)
-    api.media_upload(image)
 
     # choose ship name from list
     rawname = random.choice(open('names.txt').readlines())
     name = rawname.rstrip()
  
-    # post tweet with image
+    # post to Twitter with image
     tweet = name+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
     post_result = api.update_status(status=tweet, media_ids=[media.media_id])
-	
+    
+    # post to Mastodon with image
+    toot = name+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
+    mastodon.media_post(image)
+    mastodon.status_post(toot, media_ids=[mastodon.media_post(image)['id']])
+
 if __name__ == "__main__":
     main()
