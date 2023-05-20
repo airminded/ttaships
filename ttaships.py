@@ -78,10 +78,14 @@ def main():
     tweet = api.update_status(status=post, media_ids=[media.media_id])
 
     # Get Mastodon media URL
-    media_url = mastodon.media_post(image)['url']
+    #media_url = mastodon.media_post(image)['url']
 
     # Post to Mastodon with image
-    mastodon.status_post(post, media_ids=[mastodon.media_post(media_url)['id']])
+    #mastodon.status_post(post, media_ids=[mastodon.media_post(media_url)['id']])
+    
+    # post to Mastodon with image
+    mastodon.media_post(image)
+    mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
 
 if __name__ == "__main__":
     main()
