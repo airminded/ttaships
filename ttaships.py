@@ -34,7 +34,6 @@ def main():
     )
 
     # Get image from Cloudinary
-    # cloudinary.config(cloud_name='your_cloud_name', api_key='your_api_key', api_secret='your_api_secret')
     out = cloudinary.api.resources(type="upload", max_results=500)
     length = len(out['resources'])
     upper = length - 1
@@ -76,12 +75,6 @@ def main():
 
     # Post to Twitter with image
     tweet = api.update_status(status=post, media_ids=[media.media_id])
-
-    # Get Mastodon media URL
-    #media_url = mastodon.media_post(image)['url']
-
-    # Post to Mastodon with image
-    #mastodon.status_post(post, media_ids=[mastodon.media_post(media_url)['id']])
     
     # post to Mastodon with image
     mastodon.media_post(image)
