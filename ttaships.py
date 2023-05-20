@@ -10,10 +10,10 @@ from mastodon import Mastodon
 def main():
     from os import environ
 
-    CONSUMER_KEY = environ['CONSUMER_KEY']
-    CONSUMER_SECRET = environ['CONSUMER_SECRET']
-    ACCESS_TOKEN = environ['ACCESS_TOKEN']
-    ACCESS_TOKEN_SECRET = environ['ACCESS_TOKEN_SECRET']
+    TWITTER_CONSUMER_KEY = environ['TWITTER_CONSUMER_KEY']
+    TWITTER_CONSUMER_SECRET = environ['TWITTER_CONSUMER_SECRET']
+    TWITTER_ACCESS_TOKEN = environ['TWITTER_ACCESS_TOKEN']
+    TWITTER_ACCESS_TOKEN_SECRET = environ['TWITTER_ACCESS_TOKEN_SECRET']
     CLOUDINARY_URL = environ['CLOUDINARY_URL']
     MASTODON_CLIENT_KEY = environ['MASTODON_CLIENT_KEY']
     MASTODON_CLIENT_SECRET = environ['MASTODON_CLIENT_SECRET']
@@ -21,8 +21,8 @@ def main():
     MASTODON_BASE_URL = environ['MASTODON_BASE_URL']
 
     # Twitter authentication
-    auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-    auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+    auth = tweepy.OAuthHandler(TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET)
+    auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
     api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
     # Mastodon authentication
