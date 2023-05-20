@@ -1,26 +1,29 @@
 import tweepy
-import os, random
-import cloudinary,cloudinary.api,cloudinary.uploader
+import os
+import random
+import cloudinary
+import cloudinary.api
+import cloudinary.uploader
 import requests
 from mastodon import Mastodon
 
 def main():
-
     from os import environ
+
     CONSUMER_KEY = environ['CONSUMER_KEY']
     CONSUMER_SECRET = environ['CONSUMER_SECRET']
-    ACCESS_KEY = environ['ACCESS_KEY']
-    ACCESS_SECRET = environ['ACCESS_SECRET']
+    ACCESS_TOKEN = environ['ACCESS_TOKEN']
+    ACCESS_TOKEN_SECRET = environ['ACCESS_TOKEN_SECRET']
     CLOUDINARY_URL = environ['CLOUDINARY_URL']
     MASTODON_CLIENT_KEY = environ['MASTODON_CLIENT_KEY']
     MASTODON_CLIENT_SECRET = environ['MASTODON_CLIENT_SECRET']
     MASTODON_ACCESS_TOKEN = environ['MASTODON_ACCESS_TOKEN']
     MASTODON_BASE_URL = environ['MASTODON_BASE_URL']
-    
+
     # Twitter authentication
     auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-    auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
-    api = tweepy.API(auth)
+    auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+    api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
     # Mastodon authentication
     mastodon = Mastodon(
@@ -29,53 +32,56 @@ def main():
         access_token=MASTODON_ACCESS_TOKEN,
         api_base_url=MASTODON_BASE_URL
     )
-    
-    # get image from cloudinary
-    out = cloudinary.api.resources(type = "upload", max_results=500)
+
+    # Get image from Cloudinary
+    cloudinary.config(cloud_name='your_cloud_name', api_key='your_api_key', api_secret='your_api_secret')
+    out = cloudinary.api.resources(type="upload", max_results=500)
     length = len(out['resources'])
-    upper=length-1
-    rando = random.randrange(0,upper)
-    name=out['resources'][rando]['public_id']
-    image=out['resources'][rando]['asset_id']
+    upper = length - 1
+    rando = random.randrange(0, upper)
+    name = out['resources'][rando]['public_id']
+    image = out['resources'][rando]['asset_id']
     txtname = 'image name: ' + str(name)
     print(txtname)
-    
-    # generate AI model hashtag based on filename prefix
-    ainame=txtname[12:15]
+
+    # Generate AI model hashtag based on filename prefix
+    ainame = txtname[12:15]
     if ainame == 'mj-':
         aihashtag = '#midjourney'
     elif ainame == 'sd-':
         aihashtag = '#StableDiffusion'
-    else: 
+    else:
         aihashtag = ''
     print('AI model: ' + aihashtag)
-    url=out['resources'][rando]['url']
+    url = out['resources'][rando]['url']
     r = requests.get(url)
-    
-    # retrieving data from the URL using get method
+
+    # Retrieving data from the URL using get method
     with open(image, 'wb') as f:
         f.write(r.content)
-    
-    # delete image from cloudinary 
+
+    # Delete image from Cloudinary
     cloudinary.uploader.destroy(name)
 
-    # upload image to Twitter
-    media = api.media_upload(image)
+    # Upload image to Twitter
+    media = api.media_upload(filename=image)
 
-    # choose ship name from list
+    # Choose ship name from list
     rawname = random.choice(open('names.txt').readlines())
     shipname = rawname.rstrip()
     print('ship name: ' + shipname)
-    
-    # create post text
-    post = shipname+" does not exist #TerranTradeAuthority #AIArt "+aihashtag
- 
-    # post to Twitter with image
-    post_result = api.update_status(status=post, media_ids=[media.media_id])
-    
-    # post to Mastodon with image
-    mastodon.media_post(image)
-    mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
+
+    # Create post text
+    post = shipname + " does not exist #TerranTradeAuthority #AIArt " + aihashtag
+
+    # Post to Twitter with image
+    tweet = api.update_status(status=post, media_ids=[media.media_id])
+
+    # Get Mastodon media URL
+    media_url = mastodon.media_post(image)['url']
+
+    # Post to Mastodon with image
+    mastodon.status_post(post, media_ids=[mastodon.media_post(media_url)['id']])
 
 if __name__ == "__main__":
     main()
