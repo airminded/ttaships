@@ -59,9 +59,6 @@ def main():
     with open(image, 'wb') as f:
         f.write(r.content)
 
-    # Delete image from Cloudinary
-    cloudinary.uploader.destroy(name)
-
     # Upload image to Twitter
     media = api.media_upload(filename=image)
 
@@ -79,6 +76,9 @@ def main():
     # post to Mastodon with image
     mastodon.media_post(image)
     mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
+    
+    # Delete image from Cloudinary
+    cloudinary.uploader.destroy(name)
 
 if __name__ == "__main__":
     main()
