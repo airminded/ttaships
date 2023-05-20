@@ -34,7 +34,7 @@ def main():
     )
 
     # Get image from Cloudinary
-    cloudinary.config(cloud_name='your_cloud_name', api_key='your_api_key', api_secret='your_api_secret')
+    # cloudinary.config(cloud_name='your_cloud_name', api_key='your_api_key', api_secret='your_api_secret')
     out = cloudinary.api.resources(type="upload", max_results=500)
     length = len(out['resources'])
     upper = length - 1
