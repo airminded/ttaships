@@ -24,6 +24,12 @@ def main():
     auth = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_SECRET)
     auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
     api = tweepy.API(auth, wait_on_rate_limit=True)
+    
+    client = tweepy.Client( 
+                       consumer_key='TWITTER_API_KEY', 
+                       consumer_secret='TWITTER_API_SECRET', 
+                       access_token='TWITTER_ACCESS_TOKEN', 
+                       access_token_secret='TWITTER_ACCESS_TOKEN_SECRET')
 
     # Mastodon authentication
     mastodon = Mastodon(
@@ -69,14 +75,10 @@ def main():
 
     # Create post text
     post = shipname + " does not exist #TerranTradeAuthority #AIArt " + aihashtag
-    
-    response = client.create_tweet(
-    text="This Tweet was Tweeted using Tweepy and Twitter API v2!"
-)
 
     # Post to Twitter with image
     # tweet = api.update_status(status=post, media_ids=[media.media_id])
-    tweet = client.create_tweet(text=post, media_ids=[media.media_id])
+    tweet = Client.create_tweet(text=post, media_ids=[media.media_id])
     
     # post to Mastodon with image
     mastodon.media_post(image)
