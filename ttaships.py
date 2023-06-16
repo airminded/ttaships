@@ -78,7 +78,7 @@ def main():
 
     # Post to Twitter with image
     # tweet = api.update_status(status=post, media_ids=[media.media_id])
-    tweet = client.create_tweet(text=post, media_ids=[media.media_id], user_auth=True)
+    # tweet = client.create_tweet(text=post, media_ids=[media.media_id], user_auth=True)
     
     # post to Mastodon with image
     mastodon.media_post(image)
