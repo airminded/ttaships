@@ -71,7 +71,8 @@ def main():
     post = shipname + " does not exist #TerranTradeAuthority #AIArt " + aihashtag
 
     # Post to Twitter with image
-    tweet = api.update_status(status=post, media_ids=[media.media_id])
+    # tweet = api.update_status(status=post, media_ids=[media.media_id])
+    tweet = Client.create_tweet(text=post, media_ids=[media.media_id])
     
     # post to Mastodon with image
     mastodon.media_post(image)
