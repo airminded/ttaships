@@ -69,6 +69,10 @@ def main():
 
     # Create post text
     post = shipname + " does not exist #TerranTradeAuthority #AIArt " + aihashtag
+    
+    response = client.create_tweet(
+    text="This Tweet was Tweeted using Tweepy and Twitter API v2!"
+)
 
     # Post to Twitter with image
     # tweet = api.update_status(status=post, media_ids=[media.media_id])
