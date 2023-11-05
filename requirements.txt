@@ -1,5 +1,5 @@
 atproto==0.0.29
 cloudinary==1.36.0
 helpers==0.2.0
-mastodon==0.0.1
+Mastodon.py==1.8.1
 Requests==2.31.0
