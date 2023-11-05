@@ -1,4 +1,4 @@
-import tweepy
+#import tweepy
 import os
 import random
 import cloudinary
@@ -6,26 +6,29 @@ import cloudinary.api
 import cloudinary.uploader
 import requests
 from mastodon import Mastodon
+import atproto
 
 def main():
     from os import environ
 
-    TWITTER_API_KEY = environ['TWITTER_API_KEY']
-    TWITTER_API_SECRET = environ['TWITTER_API_SECRET']
-    TWITTER_ACCESS_TOKEN = environ['TWITTER_ACCESS_TOKEN']
-    TWITTER_ACCESS_TOKEN_SECRET = environ['TWITTER_ACCESS_TOKEN_SECRET']
+    #TWITTER_API_KEY = environ['TWITTER_API_KEY']
+    #TWITTER_API_SECRET = environ['TWITTER_API_SECRET']
+    #TWITTER_ACCESS_TOKEN = environ['TWITTER_ACCESS_TOKEN']
+    #TWITTER_ACCESS_TOKEN_SECRET = environ['TWITTER_ACCESS_TOKEN_SECRET']
     CLOUDINARY_URL = environ['CLOUDINARY_URL']
     MASTODON_CLIENT_KEY = environ['MASTODON_CLIENT_KEY']
     MASTODON_CLIENT_SECRET = environ['MASTODON_CLIENT_SECRET']
     MASTODON_ACCESS_TOKEN = environ['MASTODON_ACCESS_TOKEN']
     MASTODON_BASE_URL = environ['MASTODON_BASE_URL']
+    BLUESKY_EMAIL = environ['BLUESKY_EMAIL']
+    BLUESKY_PASSWORD = environ['BLUESKY_PASSWORD']
 
     # Twitter authentication
-    auth = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_SECRET)
-    auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
-    api = tweepy.API(auth, wait_on_rate_limit=True)
+    # auth = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_SECRET)
+    # auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
+    # api = tweepy.API(auth, wait_on_rate_limit=True)
     
-    client = tweepy.Client( 
+    # client = tweepy.Client( 
                        consumer_key='TWITTER_API_KEY', 
                        consumer_secret='TWITTER_API_SECRET', 
                        access_token='TWITTER_ACCESS_TOKEN', 
@@ -66,7 +69,7 @@ def main():
         f.write(r.content)
 
     # Upload image to Twitter
-    media = api.media_upload(filename=image)
+    # media = api.media_upload(filename=image)
 
     # Choose ship name from list
     rawname = random.choice(open('names.txt').readlines())
