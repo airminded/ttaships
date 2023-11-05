@@ -12,6 +12,7 @@ import helpers
 #import configLog
 
 def login_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD):
+    print(BLUESKY_EMAIL)
     #logger, _ = configLog.configure_logging()
     try:
         client.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
@@ -84,6 +85,8 @@ def main():
     MASTODON_BASE_URL = environ['MASTODON_BASE_URL']
     BLUESKY_EMAIL = environ['BLUESKY_EMAIL']
     BLUESKY_PASSWORD = environ['BLUESKY_PASSWORD']
+
+    print(BLUESKY_EMAIL)
 
     # ... The rest of your code remains unchanged ...
 
