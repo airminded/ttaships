@@ -17,7 +17,7 @@ def login_to_bluesky(client, BLUESKY_EMAIL, BLUESKY_PASSWORD):
         client.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
         #logger.debug("Successfully logged in to Bluesky.")
     except Exception as e:
-        #logger.error(f"Failed to log in to Bluesky: {e}")
+        print(f"Failed to log in to Bluesky: {e}")
 
 def post_to_bluesky(client, text, image_locations, alt_texts):
     #logger, _ = configLog.configure_logging()
