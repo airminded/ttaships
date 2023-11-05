@@ -7,6 +7,7 @@ import cloudinary.uploader
 import requests
 from mastodon import Mastodon
 import atproto
+import bluesky
 
 def main():
     from os import environ
@@ -86,6 +87,9 @@ def main():
     # post to Mastodon with image
     mastodon.media_post(image)
     mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
+
+    # post to Bluesky with image
+    # bluesky.post()
     
     # Delete image from Cloudinary
     cloudinary.uploader.destroy(name)
