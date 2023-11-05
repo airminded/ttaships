@@ -25,7 +25,7 @@ def post_to_bluesky(client, text, image_locations, alt_texts):
     try:
         login_to_bluesky(client, BLUESKY_EMAIL, BLUESKY_PASSWORD)
     except Exception as e:
-        #logger.error(f"Failed to log in to Bluesky: {e}")
+        print(f"Failed to log in to Bluesky: {e}")
         return False
 
     text = helpers.strip_html_tags(text)
