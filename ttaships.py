@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 import helpers
 #import configLog
 
-def login_to_bluesky(client, BLUESKY_EMAIL, BLUESKY_PASSWORD):
+def login_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD):
     #logger, _ = configLog.configure_logging()
     try:
         client.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
@@ -19,11 +19,11 @@ def login_to_bluesky(client, BLUESKY_EMAIL, BLUESKY_PASSWORD):
     except Exception as e:
         print(f"Failed to log in to Bluesky: {e}")
 
-def post_to_bluesky(client, text, image_locations, alt_texts):
+def post_to_bluesky(text, image_locations, alt_texts):
     #logger, _ = configLog.configure_logging()
 
     try:
-        login_to_bluesky(client, BLUESKY_EMAIL, BLUESKY_PASSWORD)
+        login_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD)
     except Exception as e:
         print(f"Failed to log in to Bluesky: {e}")
         return False
@@ -134,7 +134,7 @@ def main():
     mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
 
     # Post to Bluesky with text, image locations, and alt texts
-    if not post_to_bluesky(client, post, [image], [shipname]):
+    if not post_to_bluesky(post, [image], [shipname]):
         print("Failed to post to Bluesky")
 
     # Delete image from Cloudinary
