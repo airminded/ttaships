@@ -1,4 +1,5 @@
 asgiref==3.6.0
+atproto
 backports.csv==1.0.7
 backports.zoneinfo==0.2.1
 blurhash==1.1.4
@@ -30,7 +31,6 @@ schema==0.7.5
 six==1.16.0
 sqlparse==0.4.4
 tqdm==4.65.0
-tweepy==4.14.0
 urllib3==1.26.15
 Werkzeug==2.3.3
 whitenoise==6.4.0
