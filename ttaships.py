@@ -18,7 +18,7 @@ def login_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD):
         client.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
         #logger.debug("Successfully logged in to Bluesky.")
     except Exception as e:
-        print(f"Failed to log in to Bluesky: {e}")
+        print(f"1: Failed to log in to Bluesky: {e}")
 
 def post_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD, text, image_locations, alt_texts):
     #logger, _ = configLog.configure_logging()
@@ -26,7 +26,7 @@ def post_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD, text, image_locations, alt_
     try:
         login_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD)
     except Exception as e:
-        print(f"Failed to log in to Bluesky: {e}")
+        print(f"2: Failed to log in to Bluesky: {e}")
         return False
 
     text = helpers.strip_html_tags(text)
@@ -87,7 +87,6 @@ def main():
     BLUESKY_PASSWORD = environ['BLUESKY_PASSWORD']
 
     print(f"BLUESKY_EMAIL: {BLUESKY_EMAIL}")
-    print(BLUESKY_EMAIL)
 
     # ... The rest of your code remains unchanged ...
 
@@ -139,7 +138,7 @@ def main():
 
     # Post to Bluesky with text, image locations, and alt texts
     if not post_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD, post, [image], [shipname]):
-        print("Failed to post to Bluesky")
+        print("3: Failed to post to Bluesky")
 
     # Delete image from Cloudinary
     cloudinary.uploader.destroy(name)
