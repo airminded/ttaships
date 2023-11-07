@@ -87,6 +87,7 @@ def main():
     BLUESKY_PASSWORD = environ['BLUESKY_PASSWORD']
 
     print(f"BLUESKY_EMAIL: {BLUESKY_EMAIL}")
+    print(BLUESKY_EMAIL)
 
     # ... The rest of your code remains unchanged ...
 
