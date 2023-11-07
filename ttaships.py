@@ -15,7 +15,7 @@ def login_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD):
     print(f"BLUESKY_EMAIL: {BLUESKY_EMAIL}")
     #logger, _ = configLog.configure_logging()
     try:
-        client.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
+        client1.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
         #logger.debug("Successfully logged in to Bluesky.")
     except Exception as e:
         print(f"1: Failed to log in to Bluesky: {e}")
