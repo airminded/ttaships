@@ -17,6 +17,7 @@ def login_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD):
     try:
         client = Client()
         client.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
+        print(f"1: Successful log in to Bluesky.")
         #logger.debug("Successfully logged in to Bluesky.")
     except Exception as e:
         print(f"1: Failed to log in to Bluesky: {e}")
