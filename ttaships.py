@@ -85,12 +85,12 @@ def main():
     MASTODON_ACCESS_TOKEN = environ['MASTODON_ACCESS_TOKEN']
     MASTODON_BASE_URL = environ['MASTODON_BASE_URL']
     BLUESKY_EMAIL = environ['BLUESKY_EMAIL']
-    BLUESKY_PASSWORD = environ['BLUESKY_EMAIL']
+    BLUESKY_PASSWORD = environ['BLUESKY_PASSWORD']
 
     print(f"BLUESKY_EMAIL: {BLUESKY_EMAIL}")
 
     client = Client()
-    client.login(BLUESKY_EMAIL, BLUESKY_EMAIL)
+    client.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
     client.send_post(text='Hello World!')
 
     # ... The rest of your code remains unchanged ...
