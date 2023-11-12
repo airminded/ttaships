@@ -1,4 +1,5 @@
 from atproto import Client
+from os import environ
 
 BLUESKY_EMAIL = environ['BLUESKY_EMAIL']
 BLUESKY_PASSWORD = environ['BLUESKY_PASSWORD']
