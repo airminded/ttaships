@@ -8,7 +8,7 @@ from mastodon import Mastodon
 from atproto import Client, models
 from datetime import datetime
 from urllib.parse import urlparse
-import helpers
+#import helpers
 #import configLog
 
 def login_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD):
@@ -31,7 +31,7 @@ def post_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD, text, image_locations, alt_
         print(f"2: Failed to log in to Bluesky: {e}")
         return False
 
-    text = helpers.strip_html_tags(text)
+    #text = helpers.strip_html_tags(text)
     #logger.debug(f"Stripped text: {text}")
 
     images = []
@@ -57,7 +57,7 @@ def post_to_bluesky(BLUESKY_EMAIL, BLUESKY_PASSWORD, text, image_locations, alt_
             return False
 
     embed = models.AppBskyEmbedImages.Main(images=images) if images else None
-    facets = helpers.generate_facets_from_links_in_text(text) if helpers.URL_PATTERN.search(text) else None
+    #facets = helpers.generate_facets_from_links_in_text(text) if helpers.URL_PATTERN.search(text) else None
     #logger.debug(f"Embed: {embed}, Facets: {facets}")
 
     try:
