@@ -1,9 +1,12 @@
 from atproto import Client
 
+BLUESKY_EMAIL = environ['BLUESKY_EMAIL']
+BLUESKY_PASSWORD = environ['BLUESKY_PASSWORD']
+
 
 def main():
     client = Client()
-    client.login('ttaships.bsky.social', 'uppv-3brz-zy6d-e7op')
+    client.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
 
     client.send_post(text='Hello World from Python!')
 
