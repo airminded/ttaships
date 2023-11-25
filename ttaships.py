@@ -100,6 +100,7 @@ def main():
                 break  # <- Move the break statement inside the 'if' block
         else:  # Execute if the loop completes without hitting 'break'
             quality = int(max((1 - (size_kb - max_size_kb) / size_kb) * 100, 0))
+            print ('quality =', quality) 
             img.save(img_data, img_format, quality=quality)
     
     # Post to Bluesky with image
