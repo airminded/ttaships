@@ -105,12 +105,12 @@ def main():
 
     # Convert image to jpg for Bluesky
     with Image.open(image) as img:
-        rgb_img = img.convert("RGB")
-        rgb_img.save('converted.jpg')
+        rgb_img = img.convert('RGB')
+        rgb_img.save(img_converted, format='JPEG')
     
     # Post to Bluesky with image
     client.send_image(
-            text=post, image='converted.jpg', image_alt=''
+            text=post, image=img_converted, image_alt=''
         )
 
     # Delete image from Cloudinary
