@@ -4,12 +4,12 @@ import cloudinary
 import cloudinary.api
 import cloudinary.uploader
 import requests
+import io
 from mastodon import Mastodon
 from atproto import Client, models
 from datetime import datetime
 from urllib.parse import urlparse
-#import helpers
-#import configLog
+from PIL import Image
 
 def main():
     from os import environ
@@ -21,6 +21,9 @@ def main():
     MASTODON_BASE_URL = environ['MASTODON_BASE_URL']
     BLUESKY_EMAIL = environ['BLUESKY_EMAIL']
     BLUESKY_PASSWORD = environ['BLUESKY_PASSWORD']
+
+    max_size_kb = 976.56
+    max_iterations = 10
 
     print(f"BLUESKY_EMAIL: {BLUESKY_EMAIL}")
 
@@ -41,7 +44,6 @@ def main():
     # Bluesky authentication
     client = Client()
     client.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
-
 
     # Get image from Cloudinary
     out = cloudinary.api.resources(type="upload", max_results=500)
@@ -85,9 +87,23 @@ def main():
     mastodon.media_post(image)
     mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
 
+    # Resize image for Bluesky
+    with Image.open(image) as img:
+    img_format = 'PNG'
+    for _ in range(max_iterations):
+        img_data = io.BytesIO()
+        img.save(img_data, img_format)
+        size_kb = len(img_data.getvalue()) / 1024
+        if size_kb <= max_size_kb:
+            resized_image = img_data.getvalue()
+            break
+        quality = int(max((1 - (size_kb - max_size_kb) / size_kb) * 100, 0))
+        img.save(img_data, img_format, quality=quality)
+
+    
     # Post to Bluesky with image
     client.send_image(
-            text=post, image=img_data, image_alt=''
+            text=post, image=resized_image, image_alt=''
         )
 
     # Delete image from Cloudinary
