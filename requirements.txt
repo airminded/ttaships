@@ -30,6 +30,7 @@ libipld==1.0.1
 MarkupSafe==2.1.2
 Mastodon.py==1.8.1
 oauthlib==3.2.2
+Pillow==10.1.0
 psycopg2==2.9.6
 pydantic_core==2.14.5
 pydantic==2.5.2
