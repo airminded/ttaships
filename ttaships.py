@@ -25,6 +25,8 @@ def main():
     max_size_kb = 976.56
     max_iterations = 10
 
+    img_converted = 'converted.jpg'
+
     print(f"BLUESKY_EMAIL: {BLUESKY_EMAIL}")
 
     client = Client()
