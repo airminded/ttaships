@@ -101,11 +101,11 @@ def main():
         else:  # Execute if the loop completes without hitting 'break'
             quality = int(max((1 - (size_kb - max_size_kb) / size_kb) * 100, 0))
             print ('quality =', quality) 
-            img.save(img_data, img_format, quality=quality)
+            img.save(img_data2, img_format, quality=quality)
     
     # Post to Bluesky with image
     client.send_image(
-            text=post, image=resized_image, image_alt=''
+            text=post, image=img_data2, image_alt=''
         )
 
     # Delete image from Cloudinary
