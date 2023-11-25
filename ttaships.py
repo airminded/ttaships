@@ -88,24 +88,29 @@ def main():
     mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
 
     # Resize image for Bluesky
+    # with Image.open(image) as img:
+    #    img_format = 'PNG'
+    #    for _ in range(max_iterations):
+    #        img_data = io.BytesIO()
+    #        img.save(img_data, img_format)
+    #        size_kb = len(img_data.getvalue()) / 1024
+    #        print('size_kb =', size_kb)
+    #        if size_kb <= max_size_kb:
+    #            resized_image = img_data.getvalue()
+    #            break  # <- Move the break statement inside the 'if' block
+    #    else:  # Execute if the loop completes without hitting 'break'
+    #        quality = int(max((1 - (size_kb - max_size_kb) / size_kb) * 100, 0))
+    #        print ('quality =', quality) 
+    #        img.save(img_data2, img_format, quality=quality)
+
+    # Convert image to jpg for Bluesky
     with Image.open(image) as img:
-        img_format = 'PNG'
-        for _ in range(max_iterations):
-            img_data = io.BytesIO()
-            img.save(img_data, img_format)
-            size_kb = len(img_data.getvalue()) / 1024
-            print('size_kb =', size_kb)
-            if size_kb <= max_size_kb:
-                resized_image = img_data.getvalue()
-                break  # <- Move the break statement inside the 'if' block
-        else:  # Execute if the loop completes without hitting 'break'
-            quality = int(max((1 - (size_kb - max_size_kb) / size_kb) * 100, 0))
-            print ('quality =', quality) 
-            img.save(img_data2, img_format, quality=quality)
+        rgb_img = img.convert("RGB")
+        rgb_img.save('converted.jpg')
     
     # Post to Bluesky with image
     client.send_image(
-            text=post, image=img_data2, image_alt=''
+            text=post, image='converted.jpg', image_alt=''
         )
 
     # Delete image from Cloudinary
