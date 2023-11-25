@@ -89,14 +89,15 @@ def main():
 
     # Resize image for Bluesky
     with Image.open(image) as img:
-        img_format = 'PNG'
-        for _ in range(max_iterations):
-            img_data = io.BytesIO()
-            img.save(img_data, img_format)
-            size_kb = len(img_data.getvalue()) / 1024
-            if size_kb <= max_size_kb:
-                resized_image = img_data.getvalue()
-            break
+    img_format = 'PNG'
+    for _ in range(max_iterations):
+        img_data = io.BytesIO()
+        img.save(img_data, img_format)
+        size_kb = len(img_data.getvalue()) / 1024
+        if size_kb <= max_size_kb:
+            resized_image = img_data.getvalue()
+            break  # <- Move the break statement inside the 'if' block
+    else:  # Execute if the loop completes without hitting 'break'
         quality = int(max((1 - (size_kb - max_size_kb) / size_kb) * 100, 0))
         img.save(img_data, img_format, quality=quality)
     
