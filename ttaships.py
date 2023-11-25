@@ -26,7 +26,7 @@ def main():
 
     client = Client()
     client.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
-    client.send_post(text='Hello World!')
+    #client.send_post(text='Hello World!')
 
     # ... The rest of your code remains unchanged ...
 
@@ -69,6 +69,10 @@ def main():
     with open(image, 'wb') as f:
         f.write(r.content)
 
+    # Bluesky test
+    with open(image, 'rb') as f:
+        img_data = f.read()
+
     # Choose ship name from list
     rawname = random.choice(open('names.txt').readlines())
     shipname = rawname.rstrip()
@@ -83,7 +87,7 @@ def main():
 
     # Post to Bluesky with image
     client.send_image(
-            text=post, image=image, image_alt=''
+            text=post, image=img_data, image_alt=''
         )
 
     # Delete image from Cloudinary
