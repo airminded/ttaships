@@ -94,6 +94,7 @@ def main():
             img_data = io.BytesIO()
             img.save(img_data, img_format)
             size_kb = len(img_data.getvalue()) / 1024
+            print('size_kb =', size_kb)
             if size_kb <= max_size_kb:
                 resized_image = img_data.getvalue()
                 break  # <- Move the break statement inside the 'if' block
