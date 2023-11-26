@@ -73,10 +73,6 @@ def main():
     with open(image, 'wb') as f:
         f.write(r.content)
 
-    # Bluesky test
-    with open(image, 'rb') as f:
-        img_data = f.read()
-
     # Choose ship name from list
     rawname = random.choice(open('names.txt').readlines())
     shipname = rawname.rstrip()
@@ -90,13 +86,11 @@ def main():
     mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
 
     # Convert png to jpg for Bluesky
-    with Image.open(png_image_path) as img:
+    with Image.open(image) as img:
         img_byte_array = BytesIO()
         img = img.convert('RGB')  # Convert to RGB before saving as JPG
         img.save(img_byte_array, format='JPEG')
         img_byte_array.seek(0)  # Reset the pointer to the beginning of the byte array
-        with open(jpg_output_path, 'wb') as f:
-            f.write(img_byte_array.getvalue())  # Write the BytesIO content to the file
     
     processed_image = Image.open(img_byte_array)
     image_data = img_byte_array.getvalue()
