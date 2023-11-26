@@ -22,8 +22,6 @@ def main():
     BLUESKY_EMAIL = environ['BLUESKY_EMAIL']
     BLUESKY_PASSWORD = environ['BLUESKY_PASSWORD']
 
-    img_converted = 'converted.jpg'
-
     # Mastodon authentication
     mastodon = Mastodon(
         client_id=MASTODON_CLIENT_KEY,
@@ -82,7 +80,7 @@ def main():
         img.save(img_byte_array, format='JPEG')
         img_byte_array.seek(0)  # Reset the pointer to the beginning of the byte array
     
-    processed_image = Image.open(img_byte_array)
+    #processed_image = Image.open(img_byte_array)
     image_data = img_byte_array.getvalue()
     
     # Post to Bluesky with image
