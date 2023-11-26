@@ -6,15 +6,14 @@ import cloudinary.uploader
 import requests
 import io
 from mastodon import Mastodon
-from atproto import Client, models
-from datetime import datetime
-from urllib.parse import urlparse
+from atproto import Client
 from PIL import Image
 from io import BytesIO
 
 def main():
     from os import environ
 
+    # Fetching environment variables
     CLOUDINARY_URL = environ['CLOUDINARY_URL']
     MASTODON_CLIENT_KEY = environ['MASTODON_CLIENT_KEY']
     MASTODON_CLIENT_SECRET = environ['MASTODON_CLIENT_SECRET']
@@ -64,14 +63,15 @@ def main():
         f.write(r.content)
 
     # Choose ship name from list
-    rawname = random.choice(open('names.txt').readlines())
-    shipname = rawname.rstrip()
+    with open('names.txt') as names_file:
+        names = names_file.readlines()
+        shipname = random.choice(names).rstrip()
     print('ship name: ' + shipname)
 
     # Create post text
-    post = shipname + " does not exist #TerranTradeAuthority #AIArt " + aihashtag
+    post = f"{shipname} does not exist #TerranTradeAuthority #AIArt {aihashtag}"
     
-    # post to Mastodon with image
+    # Post to Mastodon with image
     mastodon.media_post(image)
     mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
 
