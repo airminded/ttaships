@@ -9,7 +9,7 @@ Original code base: https://www.mattcrampton.com/blog/step_by_step_tutorial_to_p
 This code: 
 1. executes on Heroku
 2. downloads a random image from Cloudinary
-3. creates a short post text (including a random phrase taken from names.txt) and a hashtag to specify the AI image generator used, based on the image filename prefix ("mj" or "sd")
+3. creates a short post text (including a random phrase taken from names.txt) and a hashtag to specify the AI image generator used, based on the image filename prefix ("mj-" or "sd-")
 4. posts the post text and PNG image to Mastodon
 5. converts the PNG image to JPG (to shrink the file size, because Bluesky limits image file sizes to just under 1 MB)
 6. posts the post text and JPG image to Bluesky
