@@ -23,18 +23,7 @@ def main():
     BLUESKY_EMAIL = environ['BLUESKY_EMAIL']
     BLUESKY_PASSWORD = environ['BLUESKY_PASSWORD']
 
-    max_size_kb = 976.56
-    max_iterations = 10
-
     img_converted = 'converted.jpg'
-
-    print(f"BLUESKY_EMAIL: {BLUESKY_EMAIL}")
-
-    client = Client()
-    client.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
-    #client.send_post(text='Hello World!')
-
-    # ... The rest of your code remains unchanged ...
 
     # Mastodon authentication
     mastodon = Mastodon(
