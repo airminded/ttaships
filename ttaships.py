@@ -10,6 +10,7 @@ from atproto import Client, models
 from datetime import datetime
 from urllib.parse import urlparse
 from PIL import Image
+from io import BytesIO
 
 def main():
     from os import environ
