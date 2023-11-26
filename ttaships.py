@@ -87,7 +87,7 @@ def main():
     
     # Post to Bluesky with image
     client.send_image(
-            text=post, image=img_data, image_alt=''
+            text=post, image=image_data, image_alt=''
         )
 
     # Delete image from Cloudinary
