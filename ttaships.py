@@ -1,35 +1,28 @@
-import tweepy
 import os
 import random
 import cloudinary
 import cloudinary.api
 import cloudinary.uploader
 import requests
+import io
 from mastodon import Mastodon
+from atproto import Client
+from PIL import Image
+from io import BytesIO
 
 def main():
     from os import environ
 
-    TWITTER_API_KEY = environ['TWITTER_API_KEY']
-    TWITTER_API_SECRET = environ['TWITTER_API_SECRET']
-    TWITTER_ACCESS_TOKEN = environ['TWITTER_ACCESS_TOKEN']
-    TWITTER_ACCESS_TOKEN_SECRET = environ['TWITTER_ACCESS_TOKEN_SECRET']
+    # Fetching environment variables
     CLOUDINARY_URL = environ['CLOUDINARY_URL']
     MASTODON_CLIENT_KEY = environ['MASTODON_CLIENT_KEY']
     MASTODON_CLIENT_SECRET = environ['MASTODON_CLIENT_SECRET']
     MASTODON_ACCESS_TOKEN = environ['MASTODON_ACCESS_TOKEN']
     MASTODON_BASE_URL = environ['MASTODON_BASE_URL']
+    BLUESKY_EMAIL = environ['BLUESKY_EMAIL']
+    BLUESKY_PASSWORD = environ['BLUESKY_PASSWORD']
 
-    # Twitter authentication
-    auth = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_SECRET)
-    auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
-    api = tweepy.API(auth, wait_on_rate_limit=True)
-    
-    client = tweepy.Client( 
-                       consumer_key='TWITTER_API_KEY', 
-                       consumer_secret='TWITTER_API_SECRET', 
-                       access_token='TWITTER_ACCESS_TOKEN', 
-                       access_token_secret='TWITTER_ACCESS_TOKEN_SECRET')
+    img_converted = 'converted.jpg'
 
     # Mastodon authentication
     mastodon = Mastodon(
@@ -38,6 +31,10 @@ def main():
         access_token=MASTODON_ACCESS_TOKEN,
         api_base_url=MASTODON_BASE_URL
     )
+
+    # Bluesky authentication
+    client = Client()
+    client.login(BLUESKY_EMAIL, BLUESKY_PASSWORD)
 
     # Get image from Cloudinary
     out = cloudinary.api.resources(type="upload", max_results=500)
@@ -65,25 +62,34 @@ def main():
     with open(image, 'wb') as f:
         f.write(r.content)
 
-    # Upload image to Twitter
-    media = api.media_upload(filename=image)
-
     # Choose ship name from list
-    rawname = random.choice(open('names.txt').readlines())
-    shipname = rawname.rstrip()
+    with open('names.txt') as names_file:
+        names = names_file.readlines()
+        shipname = random.choice(names).rstrip()
     print('ship name: ' + shipname)
 
     # Create post text
-    post = shipname + " does not exist #TerranTradeAuthority #AIArt " + aihashtag
-
-    # Post to Twitter with image
-    # tweet = api.update_status(status=post, media_ids=[media.media_id])
-    # tweet = client.create_tweet(text=post, media_ids=[media.media_id], user_auth=True)
+    post = f"{shipname} does not exist #TerranTradeAuthority #AIArt {aihashtag}"
     
-    # post to Mastodon with image
+    # Post to Mastodon with image
     mastodon.media_post(image)
     mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
+
+    # Convert png to jpg for Bluesky
+    with Image.open(image) as img:
+        img_byte_array = BytesIO()
+        img = img.convert('RGB')  # Convert to RGB before saving as JPG
+        img.save(img_byte_array, format='JPEG')
+        img_byte_array.seek(0)  # Reset the pointer to the beginning of the byte array
     
+    processed_image = Image.open(img_byte_array)
+    image_data = img_byte_array.getvalue()
+    
+    # Post to Bluesky with image
+    client.send_image(
+            text=post, image=image_data, image_alt=''
+        )
+
     # Delete image from Cloudinary
     cloudinary.uploader.destroy(name)
 

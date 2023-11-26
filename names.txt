@@ -1,5 +1,4 @@
 A.P. Jaccard's Starship
-Accept the following list as input, and generate 30 words or short phrases which have a similar vibe but which are otherwise quite distinct. Make sure the first letter is taken at random. If it helps they are for science fictional spaceships.
 Ach'Ernarr
 Achernar
 Aeon Explorer
