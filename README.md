@@ -17,4 +17,4 @@ This code:
 
 Note: there's currently no check for the filetype, PNG is assumed as that's what Midjourney creates
 
-It can currently be seen in action at https://sigmoid.social/@TTAships and https://ttaships.bluesky.social
+It can currently be seen in action on [@TTAships@sigmoid.social](https://sigmoid.social/@TTAships) and [@ttaships.bsky.social](https://bsky.app/profile/ttaships.bsky.social)
