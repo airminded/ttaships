@@ -89,30 +89,21 @@ def main():
     mastodon.media_post(image)
     mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
 
-    # Resize image for Bluesky
-    # with Image.open(image) as img:
-    #    img_format = 'PNG'
-    #    for _ in range(max_iterations):
-    #        img_data = io.BytesIO()
-    #        img.save(img_data, img_format)
-    #        size_kb = len(img_data.getvalue()) / 1024
-    #        print('size_kb =', size_kb)
-    #        if size_kb <= max_size_kb:
-    #            resized_image = img_data.getvalue()
-    #            break  # <- Move the break statement inside the 'if' block
-    #    else:  # Execute if the loop completes without hitting 'break'
-    #        quality = int(max((1 - (size_kb - max_size_kb) / size_kb) * 100, 0))
-    #        print ('quality =', quality) 
-    #        img.save(img_data2, img_format, quality=quality)
-
-    # Convert image to jpg for Bluesky
-    with Image.open(image) as img:
-        rgb_img = img.convert('RGB')
-        rgb_img.save(img_converted, format='JPEG')
+    # Convert png to jpg for Bluesky
+    with Image.open(png_image_path) as img:
+        img_byte_array = BytesIO()
+        img = img.convert('RGB')  # Convert to RGB before saving as JPG
+        img.save(img_byte_array, format='JPEG')
+        img_byte_array.seek(0)  # Reset the pointer to the beginning of the byte array
+        with open(jpg_output_path, 'wb') as f:
+            f.write(img_byte_array.getvalue())  # Write the BytesIO content to the file
+    
+    processed_image = Image.open(img_byte_array)
+    image_data = img_byte_array.getvalue()
     
     # Post to Bluesky with image
     client.send_image(
-            text=post, image=img_converted, image_alt=''
+            text=post, image=img_data, image_alt=''
         )
 
     # Delete image from Cloudinary
