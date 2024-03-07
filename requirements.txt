@@ -1,6 +1,6 @@
 annotated-types==0.6.0
 anyio==4.1.0
-atproto==0.0.30
+atproto==0.0.44
 certifi==2023.11.17
 click==8.1.7
 cloudinary==1.36.0
