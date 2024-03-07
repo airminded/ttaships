@@ -9,7 +9,7 @@ h11==0.14.0
 httpcore==1.0.2
 httpx==0.25.2
 idna==3.5
-libipld==1.0.1
+libipld==1.1.0
 Mastodon.py==1.8.1
 Pillow==10.1.0
 pydantic==2.5.2
