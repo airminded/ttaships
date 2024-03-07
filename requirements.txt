@@ -11,7 +11,7 @@ httpx==0.25.2
 idna==3.5
 libipld==1.1.0
 Mastodon.py==1.8.1
-Pillow==10.1.0
+Pillow==10.2.0
 pydantic==2.5.2
 pydantic_core==2.14.5
 PyJWT==2.8.0
