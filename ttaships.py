@@ -86,7 +86,7 @@ def main():
     hashtag = 'TerranTradeAuthority'
     # Post to Bluesky with image
     client.send_image(
-            text=post, image=image_data, image_alt='', facet=tag, hashtag
+            text=post, image=image_data, image_alt='', facet=[tag, hashtag]
         )
 
     # Delete image from Cloudinary
