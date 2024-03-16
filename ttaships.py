@@ -84,9 +84,13 @@ def main():
     image_data = img_byte_array.getvalue()
 
     hashtag = 'TerranTradeAuthority'
+    
+    # Create Tag facet object
+    tag_facet = Tag(tag=hashtag)  # Assuming the hashtag should be used as the tag value
+    
     # Post to Bluesky with image
     client.send_image(
-            text=post, image=image_data, image_alt='', facet=[tag, hashtag]
+            text=post, image=image_data, image_alt='', facet=[tag_facet]
         )
 
     # Delete image from Cloudinary
