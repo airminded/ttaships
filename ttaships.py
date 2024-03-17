@@ -6,7 +6,7 @@ import cloudinary.uploader
 import requests
 import io
 from mastodon import Mastodon
-from atproto import Client
+from atproto import Client, Tag
 from PIL import Image
 from io import BytesIO
 
