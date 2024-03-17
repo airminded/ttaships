@@ -7,7 +7,7 @@ import requests
 import io
 from mastodon import Mastodon
 from atproto import Client
-from atproto.models.app.bsky.richtext.facet import Tag
+from atproto_client.models.app.bsky.richtext.facet import Tag
 from PIL import Image
 from io import BytesIO
 
