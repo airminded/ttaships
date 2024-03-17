@@ -67,7 +67,7 @@ def main():
     print('ship name: ' + shipname)
 
     # Create post text
-    post = f"{shipname} does not exist #TerranTradeAuthority #AIArt {aihashtag}"
+    post = f"{shipname} does not exist #AIArt {aihashtag}"
     
     # Post to Mastodon with image
     mastodon.media_post(image)
