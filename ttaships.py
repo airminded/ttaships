@@ -6,7 +6,8 @@ import cloudinary.uploader
 import requests
 import io
 from mastodon import Mastodon
-from atproto import Client
+from atproto import Client, client_utils
+from atproto_client.utils.text_builder import TextBuilder
 from PIL import Image
 from io import BytesIO
 
@@ -44,15 +45,15 @@ def main():
     txtname = 'image name: ' + str(name)
     print(txtname)
 
-    # Generate AI model hashtag based on filename prefix
-    ainame = txtname[12:15]
-    if ainame == 'mj-':
-        aihashtag = '#midjourney'
-    elif ainame == 'sd-':
-        aihashtag = '#StableDiffusion'
-    else:
-        aihashtag = ''
-    print('AI model: ' + aihashtag)
+    # Generate AI model hashtag based on filename prefix - depecrated
+    #ainame = txtname[12:15]
+    #if ainame == 'mj-':
+    #    aihashtag = '#midjourney'
+    #elif ainame == 'sd-':
+    #    aihashtag = '#StableDiffusion'
+    #else:
+    #    aihashtag = ''
+    #print('AI model: ' + aihashtag)
     url = out['resources'][rando]['url']
     r = requests.get(url)
 
@@ -67,11 +68,14 @@ def main():
     print('ship name: ' + shipname)
 
     # Create post text
-    post = f"{shipname} does not exist #AIArt {aihashtag}"
+
+    #post = f"{shipname} does not exist #AIArt #midjourney {aihashtag}"
+    post_mastodon = f"{shipname} does not exist #AIArt #midjourney"
+    post_bluesky = f"{shipname} does not exist "
     
     # Post to Mastodon with image
     mastodon.media_post(image)
-    mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
+    mastodon.status_post(post_mastodon, media_ids=[mastodon.media_post(image)['id']])
 
     # Convert png to jpg for Bluesky
     with Image.open(image) as img:
@@ -82,11 +86,24 @@ def main():
     
     #processed_image = Image.open(img_byte_array)
     image_data = img_byte_array.getvalue()
-    
-    # Post to Bluesky with image
+
+    # Create a TextBuilder instance
+    text_builder = TextBuilder()
+
+    # Add text and tag to the builder
+    text_builder.text(post_bluesky).tag('#AIArt','AIArt').text(' ').tag('#midjourney','midjourney')
+
+    # Build the text and the facets
+    post = text_builder.build_text()
+    facets = text_builder.build_facets()
+
+    # Post to Bluesky with image and specified facets
     client.send_image(
-            text=post, image=image_data, image_alt=''
-        )
+        text=post,
+        image=image_data,
+        image_alt='',
+        facets=facets  # Pass the list of facet objects here
+    )
 
     # Delete image from Cloudinary
     cloudinary.uploader.destroy(name)
