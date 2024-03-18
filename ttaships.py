@@ -45,7 +45,7 @@ def main():
     txtname = 'image name: ' + str(name)
     print(txtname)
 
-    # Generate AI model hashtag based on filename prefix
+    # Generate AI model hashtag based on filename prefix - depecrated
     #ainame = txtname[12:15]
     #if ainame == 'mj-':
     #    aihashtag = '#midjourney'
@@ -86,9 +86,6 @@ def main():
     #processed_image = Image.open(img_byte_array)
     image_data = img_byte_array.getvalue()
 
-    #hashtag1 = 'AIArt'
-    #hashtag2 = aihashtag
-
     # Create a TextBuilder instance
     text_builder = TextBuilder()
 
@@ -106,17 +103,9 @@ def main():
         image_alt='',
         facets=facets  # Pass the list of facet objects here
     )
-    
-    # Create Tag facet object
-    #tag_facet = Tag(tag=hashtag)  # Assuming the hashtag should be used as the tag value
-    
-    # Post to Bluesky with image
-    #client.send_image(
-    #        text=post, image=image_data, image_alt='', facets=[tag_facet]
-   #     )
 
     # Delete image from Cloudinary
-    #cloudinary.uploader.destroy(name)
+    cloudinary.uploader.destroy(name)
 
 if __name__ == "__main__":
     main()
