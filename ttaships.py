@@ -7,6 +7,7 @@ import requests
 import io
 from mastodon import Mastodon
 from atproto import Client, client_utils
+from atproto_client.utils.text_builder import TextBuilder
 from PIL import Image
 from io import BytesIO
 
