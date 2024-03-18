@@ -68,11 +68,11 @@ def main():
     print('ship name: ' + shipname)
 
     # Create post text
-    post = f"{shipname} does not exist #TerranTradeAuthority #AIArt {aihashtag}"
+    post = f"{shipname} does not exist #AIArt {aihashtag}"
     
     # Post to Mastodon with image
-    mastodon.media_post(image)
-    mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
+    #mastodon.media_post(image)
+    #mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
 
     # Convert png to jpg for Bluesky
     with Image.open(image) as img:
@@ -90,7 +90,7 @@ def main():
     text_builder = TextBuilder()
 
     # Add text and tag to the builder
-    text_builder.text('This is a rich message. ').tag('This is a tag.','atproto')
+    text_builder.text(post).tag(hashtag,'atproto')
 
     # Build the text and the facets
     post = text_builder.build_text()
