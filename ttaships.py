@@ -6,8 +6,7 @@ import cloudinary.uploader
 import requests
 import io
 from mastodon import Mastodon
-from atproto import Client
-from atproto_client.models.app.bsky.richtext.facet import Tag
+from atproto import Client, client_utils
 from PIL import Image
 from io import BytesIO
 
@@ -85,17 +84,35 @@ def main():
     image_data = img_byte_array.getvalue()
 
     hashtag = 'AIArt'
+
+    # Create a TextBuilder instance
+    text_builder = TextBuilder()
+
+    # Add text and tag to the builder
+    text_builder.text('This is a rich message. ').tag('atproto')
+
+    # Build the text and the facets
+    post = text_builder.build_text()
+    facets = text_builder.build_facets()
+
+    # Post to Bluesky with image and specified facets
+    client.send_image(
+        text=post,
+        image=image_data,
+        image_alt='',
+        facets=facets  # Pass the list of facet objects here
+    )
     
     # Create Tag facet object
-    tag_facet = Tag(tag=hashtag)  # Assuming the hashtag should be used as the tag value
+    #tag_facet = Tag(tag=hashtag)  # Assuming the hashtag should be used as the tag value
     
     # Post to Bluesky with image
-    client.send_image(
-            text=post, image=image_data, image_alt='', facets=[tag_facet]
-        )
+    #client.send_image(
+    #        text=post, image=image_data, image_alt='', facets=[tag_facet]
+   #     )
 
     # Delete image from Cloudinary
-    cloudinary.uploader.destroy(name)
+    #cloudinary.uploader.destroy(name)
 
 if __name__ == "__main__":
     main()
