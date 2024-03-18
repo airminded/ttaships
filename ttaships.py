@@ -68,6 +68,7 @@ def main():
     print('ship name: ' + shipname)
 
     # Create post text
+
     #post = f"{shipname} does not exist #AIArt #midjourney {aihashtag}"
     post_mastodon = f"{shipname} does not exist #AIArt #midjourney"
     post_bluesky = f"{shipname} does not exist "
