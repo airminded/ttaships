@@ -68,7 +68,8 @@ def main():
     print('ship name: ' + shipname)
 
     # Create post text
-    post = f"{shipname} does not exist #AIArt {aihashtag}"
+    #post = f"{shipname} does not exist #AIArt {aihashtag}"
+    post = f"{shipname} does not exist "
     
     # Post to Mastodon with image
     #mastodon.media_post(image)
@@ -84,13 +85,14 @@ def main():
     #processed_image = Image.open(img_byte_array)
     image_data = img_byte_array.getvalue()
 
-    hashtag = 'AIArt'
+    hashtag1 = 'AIArt'
+    hashtag2 = aihashtag
 
     # Create a TextBuilder instance
     text_builder = TextBuilder()
 
     # Add text and tag to the builder
-    text_builder.text(post).tag(hashtag,'atproto')
+    text_builder.text(post).tag(hashtag1,'atproto').tag(hashtag2,'atproto')
 
     # Build the text and the facets
     post = text_builder.build_text()
