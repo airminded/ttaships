@@ -92,7 +92,7 @@ def main():
     text_builder = TextBuilder()
 
     # Add text and tag to the builder
-    text_builder.text(post).tag(hashtag1,'atproto').tag(hashtag2,'atproto')
+    text_builder.text(post).tag('#AIArt','AIArt').text(' ').tag('#midjourney','midjourney')
 
     # Build the text and the facets
     post = text_builder.build_text()
