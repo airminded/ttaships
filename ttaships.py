@@ -46,14 +46,14 @@ def main():
     print(txtname)
 
     # Generate AI model hashtag based on filename prefix
-    ainame = txtname[12:15]
-    if ainame == 'mj-':
-        aihashtag = '#midjourney'
-    elif ainame == 'sd-':
-        aihashtag = '#StableDiffusion'
-    else:
-        aihashtag = ''
-    print('AI model: ' + aihashtag)
+    #ainame = txtname[12:15]
+    #if ainame == 'mj-':
+    #    aihashtag = '#midjourney'
+    #elif ainame == 'sd-':
+    #    aihashtag = '#StableDiffusion'
+    #else:
+    #    aihashtag = ''
+    #print('AI model: ' + aihashtag)
     url = out['resources'][rando]['url']
     r = requests.get(url)
 
@@ -68,12 +68,13 @@ def main():
     print('ship name: ' + shipname)
 
     # Create post text
-    #post = f"{shipname} does not exist #AIArt {aihashtag}"
-    post = f"{shipname} does not exist "
+    #post = f"{shipname} does not exist #AIArt #midjourney {aihashtag}"
+    post_mastodon = f"{shipname} does not exist #AIArt #midjourney"
+    post_bluesky = f"{shipname} does not exist "
     
     # Post to Mastodon with image
-    #mastodon.media_post(image)
-    #mastodon.status_post(post, media_ids=[mastodon.media_post(image)['id']])
+    mastodon.media_post(image)
+    mastodon.status_post(post_mastodon, media_ids=[mastodon.media_post(image)['id']])
 
     # Convert png to jpg for Bluesky
     with Image.open(image) as img:
@@ -85,14 +86,14 @@ def main():
     #processed_image = Image.open(img_byte_array)
     image_data = img_byte_array.getvalue()
 
-    hashtag1 = 'AIArt'
-    hashtag2 = aihashtag
+    #hashtag1 = 'AIArt'
+    #hashtag2 = aihashtag
 
     # Create a TextBuilder instance
     text_builder = TextBuilder()
 
     # Add text and tag to the builder
-    text_builder.text(post).tag('#AIArt','AIArt').text(' ').tag('#midjourney','midjourney')
+    text_builder.text(post_bluesky).tag('#AIArt','AIArt').text(' ').tag('#midjourney','midjourney')
 
     # Build the text and the facets
     post = text_builder.build_text()
