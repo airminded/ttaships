@@ -90,7 +90,7 @@ def main():
     text_builder = TextBuilder()
 
     # Add text and tag to the builder
-    text_builder.text('This is a rich message. ').tag('atproto')
+    text_builder.text('This is a rich message. ').tag('This is a tag.','atproto')
 
     # Build the text and the facets
     post = text_builder.build_text()
