@@ -61,6 +61,12 @@ def main():
     with open(image, 'wb') as f:
         f.write(r.content)
 
+    # Get image dimensions for Bluesky
+    with Image.open(image) as img:
+        width, height = img.size
+        aspect_ratio = width / height
+    print(f"Image aspect ratio: {aspect_ratio:.2f}")
+
     # Choose ship name from list
     with open('names.txt') as names_file:
         names = names_file.readlines()
@@ -102,6 +108,7 @@ def main():
         text=post,
         image=image_data,
         image_alt='',
+        image_aspect_ratio=aspect_ratio,
         facets=facets  # Pass the list of facet objects here
     )
 
