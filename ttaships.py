@@ -4,12 +4,12 @@ import cloudinary
 import cloudinary.api
 import cloudinary.uploader
 import requests
-import io
+from io import BytesIO
 from mastodon import Mastodon
 from atproto import Client, client_utils
 from atproto_client.utils.text_builder import TextBuilder
 from PIL import Image
-from io import BytesIO
+from atproto_client import models
 
 def main():
     from os import environ
@@ -38,41 +38,42 @@ def main():
     # Get image from Cloudinary
     out = cloudinary.api.resources(type="upload", max_results=500)
     length = len(out['resources'])
-    upper = length - 1
-    rando = random.randrange(0, upper)
-    name = out['resources'][rando]['public_id']
-    image = out['resources'][rando]['asset_id']
+    # fix for oldest image
+    # upper = length - 1
+    # rando = random.randrange(0, upper)
+    rando = random.randrange(0, length)
+    resource = out['resources'][rando]
+    name = resource['public_id']
+    image = resource['asset_id']
+    url = resource['url']
+
+    # Print image name
     txtname = 'image name: ' + str(name)
     print(txtname)
 
-    # Generate AI model hashtag based on filename prefix - depecrated
-    #ainame = txtname[12:15]
-    #if ainame == 'mj-':
-    #    aihashtag = '#midjourney'
-    #elif ainame == 'sd-':
-    #    aihashtag = '#StableDiffusion'
-    #else:
-    #    aihashtag = ''
-    #print('AI model: ' + aihashtag)
-    url = out['resources'][rando]['url']
+    # Download image from Cloudinary
     r = requests.get(url)
-
-    # Retrieving data from the URL using get method
     with open(image, 'wb') as f:
         f.write(r.content)
+
+    # Get image dimensions using Pillow
+    with Image.open(image) as img:
+        width, height = img.size
+    print(f"Image dimensions: {width}x{height}")
+
+    # Calculate aspect ratio
+    aspect_ratio = models.AppBskyEmbedDefs.AspectRatio(height=height, width=width)
 
     # Choose ship name from list
     with open('names.txt') as names_file:
         names = names_file.readlines()
         shipname = random.choice(names).rstrip()
-    print('ship name: ' + shipname)
+    print('Ship name: ' + shipname)
 
     # Create post text
-
-    #post = f"{shipname} does not exist #AIArt #midjourney {aihashtag}"
     post_mastodon = f"{shipname} does not exist #AIArt #midjourney"
     post_bluesky = f"{shipname} does not exist "
-    
+
     # Post to Mastodon with image
     mastodon.media_post(image)
     mastodon.status_post(post_mastodon, media_ids=[mastodon.media_post(image)['id']])
@@ -82,9 +83,8 @@ def main():
         img_byte_array = BytesIO()
         img = img.convert('RGB')  # Convert to RGB before saving as JPG
         img.save(img_byte_array, format='JPEG')
-        img_byte_array.seek(0)  # Reset the pointer to the beginning of the byte array
-    
-    #processed_image = Image.open(img_byte_array)
+        img_byte_array.seek(0)
+
     image_data = img_byte_array.getvalue()
 
     # Create a TextBuilder instance
@@ -97,12 +97,13 @@ def main():
     post = text_builder.build_text()
     facets = text_builder.build_facets()
 
-    # Post to Bluesky with image and specified facets
+    # Post to Bluesky with image, aspect ratio, and specified facets
     client.send_image(
         text=post,
         image=image_data,
         image_alt='',
-        facets=facets  # Pass the list of facet objects here
+        image_aspect_ratio=aspect_ratio,
+        facets=facets
     )
 
     # Delete image from Cloudinary
