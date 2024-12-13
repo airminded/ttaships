@@ -38,11 +38,18 @@ def main():
     # Get image from Cloudinary
     out = cloudinary.api.resources(type="upload", max_results=500)
     length = len(out['resources'])
+    # fix for oldest image
+    # upper = length - 1
+    # rando = random.randrange(0, upper)
     rando = random.randrange(0, length)
     resource = out['resources'][rando]
     name = resource['public_id']
     image = resource['asset_id']
     url = resource['url']
+
+    # Print image name
+    txtname = 'image name: ' + str(name)
+    print(txtname)
 
     # Download image from Cloudinary
     r = requests.get(url)
