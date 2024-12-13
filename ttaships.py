@@ -106,7 +106,7 @@ def main():
     )
 
     # Delete image from Cloudinary
-    cloudinary.uploader.destroy(name)
+    # cloudinary.uploader.destroy(name)
 
 if __name__ == "__main__":
     main()
