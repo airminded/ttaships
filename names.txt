@@ -1,5 +1,4 @@
 A.P. Jaccard's Starship
-Ach'Ernarr
 Achernar
 Aeon Explorer
 Aeon Explorer MK-XIII
@@ -17,7 +16,7 @@ Alathea Prime
 Albatross
 Alhambra
 Alhambra's Shadow
-All'egra VII
+Allegra VII
 Allegra
 Alpha M.A.R.S.
 Alpha M.A.R.S. Omega
@@ -40,9 +39,9 @@ Apollo's Fury
 Apollo's Fury MK-XXI
 Apollo's Hammer
 Apollo's Hammerhead
-Ar'ctic Fox Fire
-Ar'es-9X
-Ar'gus Sentinel
+Arctic Fox Fire
+Ares-9X
+Argus Sentinel
 Arcadia
 Arcadia Quest
 Arcanum
@@ -115,7 +114,6 @@ Bucephalus
 Buck
 Buckminsterful
 C14 Transporter
-C14 Transporter Run
 CA 440 Crusader
 Cadmus
 Calais
@@ -148,7 +146,7 @@ Chimera's Wrath
 Chronos
 Chronos Cruiser
 City Ship of Alpha Prime
-Colonial I's Journey
+Colonial I
 Colossus
 Columbia
 Columbus
@@ -710,11 +708,10 @@ The Starfire Project
 The Starship Designs of Alpha
 The Starship Drake
 The Starship Orion
-The Transports
 Thunderbird
 Thunderbolt MCR-23
 Thunderstrike
-Time Traveler
+Time Traveller
 Titan
 Titan's Fury
 Titanic II
