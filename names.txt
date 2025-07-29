@@ -1,8 +1,17 @@
+A Firm But Fair Response 
+A History Of Subsequent Events 
+A Momentary Lapse Of Judgement 
+A Murmur Of Regret 
+A Polite Escalation 
+A Question Of Scale 
 A.P. Jaccard's Starship
 Achernar
 Aeon Explorer
 Aeon Explorer MK-XIII
 Aether
+Aether Sail  
+Aether's Whisper
+Aetherion  
 Ag'Nesz
 Agnes
 Al'batross IX
@@ -16,8 +25,10 @@ Alathea Prime
 Albatross
 Alhambra
 Alhambra's Shadow
-Allegra VII
+All Sales Final 
+All The Empty Spaces 
 Allegra
+Allegra VII
 Alpha M.A.R.S.
 Alpha M.A.R.S. Omega
 Alvin
@@ -26,6 +37,11 @@ Alvin H-1
 Alvin I
 Am'arillon
 Amarillo
+An Acceptable Level Of Violence 
+An Elegant Sufficiency 
+An End To All Our Questions 
+An Irrefutable Counterpoint 
+And Another Thing... 
 Andromeda
 Andromeda's Quest
 Andromedan Wyrmhole
@@ -39,21 +55,22 @@ Apollo's Fury
 Apollo's Fury MK-XXI
 Apollo's Hammer
 Apollo's Hammerhead
-Arctic Fox Fire
-Ares-9X
-Argus Sentinel
 Arcadia
 Arcadia Quest
 Arcanum
 Arcanum's Scythe
 Arctic Fox
+Arctic Fox Fire
 Arctic Fox II
 Arctic Fox II: Star Scavenger
 Arcturian Starship
 Arcturian Starship Nexus
 Ares
+Ares-9X
+Argent Voyager
 Argonaut
 Argus
+Argus Sentinel
 Ariel
 Ariel's Bane
 Aries
@@ -68,8 +85,10 @@ Asterion IV: Shadow Runner
 Asteroid 734
 Astraeus
 Astral Hunter
+Astral Mule  
 Astral Nomad
 Astrolabe
+Astron Nomad  
 Atlas
 Atrium
 Aur
@@ -84,15 +103,18 @@ AURORA C
 AURORA D
 Aurora Nova
 Aurora Voyager
+Available For Parties
 Avalanche
 Avenger
 Baboon
 Bardolph
+Barely Adequate 
 Barnes' Star
 Barrhaven
 Bartitsu
 Beezlebub
 Bellerophon
+Beowulf
 Beth
 Bethany
 Beyond Horizon
@@ -102,13 +124,21 @@ Black Hole Seeker
 Black Lotus
 Black Phoenix
 Black Star
+Blackstorm Clipper  
+Blackthorn  
 Blaze
+Blaze Hauler  
+Blitzkrieg  
 Blue Nebula
 Bode
 Boomer
+Boreal Comet
+Borealis Runner  
 Breeze
 Bremen
+Brighteye
 Bristol
+Broadsword
 Buccaneer
 Bucephalus
 Buck
@@ -116,7 +146,9 @@ Buckminsterful
 C14 Transporter
 CA 440 Crusader
 Cadmus
+Caelum V  
 Calais
+Calculated Risk 
 Calypso
 Calypso's Quest
 CAM 117 Thunderbird
@@ -127,17 +159,20 @@ Capella
 Capricorn
 Carina
 Celestia
+Celestial Cartographer
 Celestial Cruiser
 Celestial Crusader
 Celestial Explorer
 Celestial Guardian
 Celestial Knight
 Celestial Odyssey
+Celestial Sentinel  
 Celestial Sovereign
 Centaurus
 Centaurus Prime
 Centurion
 Cerberus
+Cerberus-IV  
 Chariot
 Cherry
 Cherry II
@@ -146,6 +181,8 @@ Chimera's Wrath
 Chronos
 Chronos Cruiser
 City Ship of Alpha Prime
+Cobalt Vanguard  
+Cognitive Dissonance 
 Colonial I
 Colossus
 Columbia
@@ -153,6 +190,7 @@ Columbus
 Constellation
 Constellation II
 Constitution
+Contents May Have Shifted During Transit 
 Cookie
 Corsair
 Cosmic Drifter
@@ -161,6 +199,8 @@ Cosmic Rover
 Cosmic Sentinel
 Cosmos Cruiser
 Cosmosis
+Crimson Maw  
+Crimson Meridian
 Crimson Phoenix
 Crusader
 Cutlass
@@ -175,23 +215,31 @@ Daedalus AM
 Daedalus AS
 Daedalus AS II
 Daedalus II
+Daggerwing  
 Dagor
 Dana
+Dark Matter  
 Dark Matter Probe
 Dark Matter Voyager
+Darkfire  
 Dart
 Dasher
 Dawn
 Dawning Star
+Deepstar  
+Deliberate Misunderstanding 
 Delta
 Delta Phoenix
 Delta Star
 Diana
+Did I Leave The Stove On 
 Dingo
 Discovery
 Discovery 1
 Discovery IX
 Distant Star
+Do Not Lick 
+Don't Make This A Habit 
 Dorado
 Dorado II
 Dorado III
@@ -208,18 +256,26 @@ Dragon's Fury
 Dragonfire Explorer
 Dragonfly
 Drake
+Dreadnought  
+Dreamer's Horizon
+Duskrunner
 Dysat
 Dyson
 Eagle
+Echoes of Infinity
 Eclipse
+Eclipse Marauder  
+Eclipse Runner  
 Eclipse Voyager
 Eclipse's Shadow
 Elisa
 Elysium's Star
+Emberfall
 Endeavour
 Endurance
 Enterprise
 Enterprise IIC
+Envoy-7  
 Enya
 Eon's Explorer
 Erebus
@@ -229,6 +285,7 @@ Europa
 Event Horizon
 Eventide
 Everest
+Everwatch  
 Excalibur
 Expedition
 Explorer
@@ -241,25 +298,35 @@ Falcon 7
 Falcon 7E
 Falcon 8
 Falcon's Flight
+Far Wanderer
 Fell
 Fenix
+Fenrir Class  
 Fenris
 Ferryman's Lament
 Fiji
 Firebird
 Flamingo
+Flarehawk  
 Fletcher
+For Your Own Good 
 Franklin
 Freedom
 Freedom Express
 Frigate
+Frost Talon  
+Frostbyte Carrier  
+Frostfire
 Fulcrum
 Fury FTR-8
+Furywing  
 Galactica
 Galahad
 Galax
+Galaxia's Heart
 Galaxian
 Galaxy Express
+Galaxy Forge  
 Galaxy Guardian
 Galaxy Pioneer
 Galaxy Queen
@@ -281,6 +348,7 @@ Ghost
 Ghost Runner
 Giri
 Glacier
+Glaive-Prime  
 Gnat
 Goblin
 Goblin II
@@ -291,7 +359,11 @@ Goblin Mk IV
 Goblin Mk V
 Goliath
 Goliath GCR-12
+Goliath Prime  
+Gossamer Wing
+Gravitas  
 Graviton
+Gravity Is Just A Suggestion 
 Grieta Mariposa
 Griffin
 Grizzly
@@ -300,30 +372,51 @@ Gulfstream V
 Hades
 Hadley's Hope
 Halcyon
+Halcyon Drift  
 Hammerhead
 Harpoon
 Hawk
 Helios
 Helios Explorer
 Helios II
+Heliotrope
 Helix Explorer
 Helix Raider
+Hellhound  
+Helmsman’s Pride  
 Hercules
 Hermes
 Himalaya
 Hindenburg
+Hold My Drink 
 Honeybee
 Hooker
 Horde
+Horizon Express  
+Horizon Seeker
 Hornblower
 Hornet
 Hunter
 Hunter-Killer
 Hyperion
 Hyperion Hammer
+Hyperion Reach  
 Hypernova Cruiser
+I Am Not Lost 
+I Can Hear You Thinking 
+I Can Probably Handle It 
+I Did It For A Bet 
+I Did The Math 
+I Forgot The Premise Your Cooperation Is Appreciated 
+I Have The Moral High Ground 
+I've Heard Worse 
+I've Seen Worse
 Icarus
+Icarus Mk.III  
+Icarus Reborn
 Imperial Dreadnought
+Inevitable Conclusion 
+Inferno Claw  
 Infinite Horizon
 Infinite Passage
 Interstellar Horizon
@@ -331,31 +424,54 @@ Interstellar Vanguard
 Intrepid
 Invincible
 Invincible Star
+Iridarium Flyer  
 Ironclad
+Ironclad X  
+Ironwood
+It Seemed Like A Good Idea At The Time 
+Jade Serpent
 Jaguar
 Jaguar II
 Jaguar III
 Jaguar IV
+Javelin Zeta  
+Javelin-9  
+Jotunheim Express  
+Jovian Skies
 Juno
+Juno Drifter  
 Jupiter
 Jupiter Explorer
+Just Following Orders 
+Just Following The Narrative 
+K-V Astraea  
 Kangaroo
 Kestrel
+Kestrel One  
+Kestrel's Flight
 Kethonian Scout
 Kingfisher
 Kingfisher II
 Kobold
 Kobold Lacrosse
 Kodiak
+Kodiak Run  
 Königsstern
+Kosmic Nomad
 Kraken
+Kraken’s Shadow 
+Kronos Cruiser  
 Kuznetsov
 Kuznetsova II
 Lagrange Point
+Lancer Prime  
 Lenin
 Lenin's Revolution
+Let's Not Make A Scene 
+Let's Not Make This Complicated 
 Leviathan
 Liberator
+Libra Star  
 Lima
 Lima A
 Lima B
@@ -366,13 +482,17 @@ Lima F
 Lima G
 Loki
 Loki VII
+Luminar Echo  
+Luminara
 Luna
 Lunex
 Lupita
+Lyra's Song
 M.A.R.S.
 Macedonian
 Madrid
 Maelstrom
+Maelstrom-VII  
 Magellan
 Maggie
 Maglev
@@ -386,6 +506,7 @@ Mandrake
 Mandrake II
 Mandrake IV
 Manticore
+Manticore V  
 Marauder
 Mare
 Mare Marginis
@@ -401,15 +522,20 @@ Mendel
 Mercer
 Mercury
 Mercy
+Meridian Star
 Mermaid
 Merrill
+Meteor Strike  
 Miko
 Milton
 Milton Bradley's Worlds of Wonder Ship
 Mimosa
 Mimosa 
 Minnie
+Minor Course Correction 
+Minor Inconvenience 
 Minsky
+Mirage V  
 Missouri's Glory
 Mk 5 Mod. 1
 Mk 5 Mod. 2
@@ -421,10 +547,14 @@ Mombasa
 Monad
 Mondra
 Montana
+Moonlit Path
 Moth
 Motumbi's Discovery
 Muninn
 Muse
+My Other Job Is Being Right 
+My Other Ship Is A Planet 
+My Patience Is A Finite Resource 
 Myrtilus
 Myshkin
 Nautilus
@@ -437,25 +567,33 @@ Naxaren Dreadnought
 Nebuchad
 Nebuchadnezzar
 Nebula
+Nebula Blade  
+Nebula Chaser  
 Nebula Fire
 Nebula Nomad
 Nebula Storm
 Nebula Voyager
+Nebula's Breath
 Nebula's Fury
 Nebulon
 Nemesis NS-11
 Nexus
+Nightingale
 Nimbus
 Nimbus 2000
 Nirvana
+No Further Questions 
 Nomad
 Nomad II
+Not To Be Taken Internally 
 Nova
 Nova Explorer
 Nova Guardian
 Nova Lance
 Nova Prime
 Nova Serpent
+Novaclad  
+Now For The Hard Part 
 Nubian
 NX-2
 Oberon
@@ -469,10 +607,14 @@ Object #8 Titan
 Object #9 Juno
 Object #9 Tau Ceti
 Oblivion
+Obsidian Ridge  
+Oceanus Prime
 Odin
 Odin II
 Odin's Chariot
 Odyssey
+Odyssey-Delta  
+Odyssey-Prime  
 Olympia
 Omega
 Omega Star Cruiser
@@ -492,6 +634,7 @@ Orion Attack Ship
 Orion III
 Orion IV
 Orion Mining Colony Ship
+Orion Steed  
 Orion Transporter
 Orion Transporter (Ninth Revision)
 Orion V
@@ -499,9 +642,10 @@ Orion VI
 Orion VII
 Orion VIII
 Orion VIII RSO
+Orion’s Arrow
+Orion's Belt
 Orion's Glory
 Orion's Guardian
-Orion’s Arrow
 Oscar
 Otter
 Owl
@@ -514,29 +658,46 @@ Panther's Roar
 Paradox
 Pegasus
 Pegasus Prime
+Per My Last Communiqué 
+Peregrine  
 Perseus
+Phantom Edge  
 Phantom Runner
 Phoebe
 Phoenix
 Phoenix Ascendant
 Phoenix Explorer
+Phoenix Flame
 Pintail
 Pioneer
 Plato
+Plausible Deniability 
+Please Form An Orderly Queue 
 Pluto
+Polaris Dawn
+Polaris Vanguard  
 Princeton
+Prism Scythe  
+Probably Harmless 
 Prodigium
+Professional Courtesy 
 Proteus
 Proxima's Hope
 Proximae
 Quantum
+Quantum Dream
 Quantum Explorer
+Quantum Hawk  
+Quantum Nomad  
 Quantum Tempest
+Quasar Blade  
+Quasar Leap  
 Queen
 Queen of Stars
 Queen of the Night
 Queen of the Stars
 R3
+Radiant Dawn
 Rama
 Rama 17
 Rama 18
@@ -545,18 +706,22 @@ Rama 20
 Rama 21
 Rama 22
 Rama II
+Raven Spire  
 Raza
 Raza, Mk. 3
 Raza, Mk. 4
 Raza, Mk. 5
 Razor
+Reasonable Application Of Force 
 Red Baron
 Redgauntlet
+Redwing  
 Reider
 Reitan
 Remus' Legacy
 Renaissance
 Revenge
+Riftblade  
 Rigel
 Risorgimento
 Riven
@@ -569,7 +734,10 @@ Rondelle
 Rose
 Rosebud
 Rosetta
+Rounding Error 
 Rove
+Rusthound  
+Rustler's Moon
 Rutherford
 Sabre
 Sagan
@@ -583,6 +751,7 @@ Santa Fe
 Santiago
 Sapphire
 Saratoga
+Sarcasm Module Engaged 
 Sardonyx
 SAS
 Satan
@@ -600,6 +769,7 @@ Sebo 52
 Sedgwick
 Sedna
 Sentinel
+Sentinel-Prime  
 Seraphim
 Serena
 Serendipity
@@ -619,16 +789,21 @@ Shenzhou VII
 Shuttle
 Sid
 Sidewinder
+Silver Surfer
 Silverback
 Sirius
 Skorpiyan Leviathan
 Skybreaker
 Skylark
+Slightly Out Of Phase 
 Solar
 Solar Clipper
+Solar Mite  
 Solar Queen
 Solar Sentinel
+Solar Warden  
 Solaris
+Some Assembly Required 
 Spacechase
 Spacewar
 Spartan
@@ -636,6 +811,7 @@ Sphinx
 Spitfire
 Spruce
 Spruce II
+Standard Deviation From The Mean 
 Star
 Star Fury
 Star Lord
@@ -648,6 +824,7 @@ Starfighter
 Starfighter Experimental
 Starfire
 Starfish
+Starfury  
 Stargazer
 Starglider
 Starhawk
@@ -663,6 +840,7 @@ Starraker
 Starry Horizon
 Starstrider
 Stella Maris
+Stellar Flare
 Stellar Storm
 Stellaris
 Stellarum
@@ -685,35 +863,64 @@ Supernova Seeker
 Sydney
 Tartarus
 Tau Ceti
+Teachable Moment 
 Tempest
+Tempest Class  
 Tempest II
 Tempest TGR-44
+Terms And Conditions May Apply 
+Terra Nova
+That Escalated Quickly 
+That's Not My Department 
 The Achilles Gambit
+The Answer Is Obvious 
 The Big Papi
 The Black Pearl
 The City
 The City Ships of Beta
 The City Ships of Delta
 The City Ships of Zeta
+The Consequence Of Waking Up 
+The Courtesy Of A Quick End 
 The Fleet of Fennus
 The Galaxy
+The Last Thing You'll Never See 
+The Logic Of Unfinished Things 
 The Orion IV (The Great Journey)
 The Orion Replica
 The Other
+The Problem Is Now Resolved 
 The Sanguine
+The Shape Of The Argument 
 The Ships of Earth
 The ships of the Alpha Colony
+The Slow Cancellation Of The Future 
+The Slow Work Of Centuries 
+The Sound Of Inevitability 
 The Starfighters of Eve
 The Starfire Project
 The Starship Designs of Alpha
 The Starship Drake
 The Starship Orion
+The Sum Of All Probabilities 
+The Weight Of Expectation 
+There Will Be No Second Warning 
+Things Could Always Be Worse 
+This Concludes The Negotiation 
+This Counts As A Warning 
+This Is Going To Be Expensive 
+This Is Not A Drill 
+This Is The Part Where It Gets Interesting 
+Thunder Child
+Thunder Reel  
 Thunderbird
 Thunderbolt MCR-23
 Thunderstrike
 Time Traveller
 Titan
 Titan's Fury
+Titan’s Fury  
+Titanforge  
 Titanic II
 Tornado
 Transcendent
@@ -723,12 +930,22 @@ Transporter
 Trident
 Trilaxian carrier
 Troy
+Twilight's Embrace
 Typhoon
+Umbra
+Umbra Sentinel  
+Unity's Promise
+Unresolved Variable 
+Unsolicited Opinion
+Uranian Guard  
 Uranus
 Ursa Major
+Ursa Majoris  
 Ursa Minor
+Ursine  
 Valiant
 Valkyrie
+Valkyrie Apex  
 Valkyrie II
 Vampire
 Vanduul Dyson
@@ -743,10 +960,17 @@ Victor
 Viper
 Vix
 Vixen
+Void Stalker
+Voidrunner  
+Voidstrider  
+Voluntary Compliance 
 Vortex Navigator
+Vortex Starfire  
 Voyager
 Vulcan
 Vulcan Queen
+Warden Crest  
+Warhawk-Nova  
 Warp Explorer
 Warp Hunter
 Warp Marauder
@@ -755,12 +979,18 @@ Warp Strider
 Warp Striker
 Warp Talon
 Warp Vortex
+Warspider  
 Warthog
 Waverider
+Wayfarer's Hope
 Wayfinder
+We Both Know How This Ends 
+We Have Been Here Before 
 Wedge
 Wendell
 Wendy
+Wildfire
+Wolfsbane  
 Worcester
 Wyvern
 X-15
@@ -777,13 +1007,31 @@ Xalax's Starcraft
 Xanthean Explorer
 Xena
 Xenarite Envoy
+Xenon
+Xenon Star  
+Xenon Strider  
 Xenon XCR-5
+XZ-11 Raider  
+Yearning
+Yggdrasil
+Ymir Explorer  
+Ymir’s Hammer  
+You Get What You Pay For 
+You Had To Be There 
+You Should See The Other Guy 
+You Were Followed 
 Z
 Z-95
+Z-Craft Destroyer  
 Z-wing
 Zee
 ZeeRider
+Zenith Flyer  
+Zenith Runner
 Zephyr
+Zephyr's Kiss
+Zephyrus  
+Zephyrus Rift  
 Zeus
 Ziggy
 Zodiac
