@@ -1,11 +1,21 @@
+A Calculated Risk
+A Difference Of Opinion
+A Failure To Communicate
 A Firm But Fair Response 
+A Foregone Conclusion
 A History Of Subsequent Events 
+A Minor Inconvenience At Most
+A Moment Held In Amber
+A Moment Of Your Time
 A Momentary Lapse Of Judgement 
 A Murmur Of Regret 
+A Necessary Evil
 A Polite Escalation 
 A Question Of Scale 
+A Study In Subtlety
 A.P. Jaccard's Starship
 Achernar
+Adjusting For Inflation
 Aeon Explorer
 Aeon Explorer MK-XIII
 Aether
@@ -25,8 +35,10 @@ Alathea Prime
 Albatross
 Alhambra
 Alhambra's Shadow
+All Sales Are Final
 All Sales Final 
 All The Empty Spaces 
+All The Songs Left Unsung
 Allegra
 Allegra VII
 Alpha M.A.R.S.
@@ -37,7 +49,7 @@ Alvin H-1
 Alvin I
 Am'arillon
 Amarillo
-An Acceptable Level Of Violence 
+An Acceptable Level Of Violence
 An Elegant Sufficiency 
 An End To All Our Questions 
 An Irrefutable Counterpoint 
@@ -47,7 +59,7 @@ Andromeda's Quest
 Andromedan Wyrmhole
 Ant'ar-1
 Antares
-Apoc'alyptic Voyager
+Apocalyptic Voyager
 Apocalypse Explorer
 Apollo
 Apollo 2
@@ -103,7 +115,7 @@ AURORA C
 AURORA D
 Aurora Nova
 Aurora Voyager
-Available For Parties
+Available For Parties And Small Wars
 Avalanche
 Avenger
 Baboon
@@ -187,6 +199,7 @@ Colonial I
 Colossus
 Columbia
 Columbus
+Consider The Alternative
 Constellation
 Constellation II
 Constitution
@@ -239,7 +252,10 @@ Discovery 1
 Discovery IX
 Distant Star
 Do Not Lick 
+Don't Look At Me
+Don't Make Me Turn This Ship Around
 Don't Make This A Habit 
+Don't Mind Me
 Dorado
 Dorado II
 Dorado III
@@ -262,6 +278,7 @@ Duskrunner
 Dysat
 Dyson
 Eagle
+Echo Of A Supernova
 Echoes of Infinity
 Eclipse
 Eclipse Marauder  
@@ -287,6 +304,7 @@ Eventide
 Everest
 Everwatch  
 Excalibur
+Existential Crisis On Deck Five
 Expedition
 Explorer
 Explorer II
@@ -309,6 +327,8 @@ Firebird
 Flamingo
 Flarehawk  
 Fletcher
+For Future Reference
+For Scientific Purposes, Mostly
 For Your Own Good 
 Franklin
 Freedom
@@ -388,6 +408,7 @@ Hercules
 Hermes
 Himalaya
 Hindenburg
+Hold My Beer
 Hold My Drink 
 Honeybee
 Hooker
@@ -405,10 +426,18 @@ Hypernova Cruiser
 I Am Not Lost 
 I Can Hear You Thinking 
 I Can Probably Handle It 
+I Contain Multitudes, And Also Drones
 I Did It For A Bet 
+I Did The Math
 I Did The Math 
-I Forgot The Premise Your Cooperation Is Appreciated 
+I Forgot The Premise 
+Your Cooperation Is Appreciated 
 I Have The Moral High Ground 
+I Make A Lousy First Impression
+I'm Sure It's Fine
+I'm Sure It's Nothing
+I'm The Reason For The Rules
+I've Had Better Days
 I've Heard Worse 
 I've Seen Worse
 Icarus
@@ -428,7 +457,11 @@ Iridarium Flyer
 Ironclad
 Ironclad X  
 Ironwood
+It Gets Better
 It Seemed Like A Good Idea At The Time 
+It Was Fun While It Lasted
+It's A Dry Heat
+It's Probably Nothing
 Jade Serpent
 Jaguar
 Jaguar II
@@ -442,8 +475,9 @@ Juno
 Juno Drifter  
 Jupiter
 Jupiter Explorer
-Just Following Orders 
+Just Following Orders
 Just Following The Narrative 
+Just Passing Through
 K-V Astraea  
 Kangaroo
 Kestrel
@@ -465,10 +499,12 @@ Kuznetsov
 Kuznetsova II
 Lagrange Point
 Lancer Prime  
+Last Known Trajectory
 Lenin
 Lenin's Revolution
-Let's Not Make A Scene 
+Let's Not Make A Scene
 Let's Not Make This Complicated 
+Let's See What This Button Does
 Leviathan
 Liberator
 Libra Star  
@@ -583,8 +619,10 @@ Nimbus
 Nimbus 2000
 Nirvana
 No Further Questions 
+No Hard Feelings
 Nomad
 Nomad II
+Not Lost, Just Exploring
 Not To Be Taken Internally 
 Nova
 Nova Explorer
@@ -622,6 +660,7 @@ Omega's Dawn
 Omega's Triumph
 Omicron Theta
 Omniscience
+Only A Flesh Wound
 Or
 Oran
 Orbital Destroyer
@@ -678,6 +717,7 @@ Polaris Dawn
 Polaris Vanguard  
 Princeton
 Prism Scythe  
+Probably A Metaphor
 Probably Harmless 
 Prodigium
 Professional Courtesy 
@@ -712,6 +752,7 @@ Raza, Mk. 3
 Raza, Mk. 4
 Raza, Mk. 5
 Razor
+Read The Fine Print
 Reasonable Application Of Force 
 Red Baron
 Redgauntlet
@@ -776,6 +817,7 @@ Serendipity
 Serendipity II
 Serendipity R
 Serenity
+Serving The Narrative
 Sewell
 Shadow Explorer
 Shadowblade
@@ -795,7 +837,9 @@ Sirius
 Skorpiyan Leviathan
 Skybreaker
 Skylark
+Slightly More Than You Can Chew
 Slightly Out Of Phase 
+Slightly Used God
 Solar
 Solar Clipper
 Solar Mite  
@@ -803,7 +847,8 @@ Solar Queen
 Solar Sentinel
 Solar Warden  
 Solaris
-Some Assembly Required 
+Some Assembly Required
+Some Exceptions May Apply
 Spacechase
 Spacewar
 Spartan
@@ -811,7 +856,7 @@ Sphinx
 Spitfire
 Spruce
 Spruce II
-Standard Deviation From The Mean 
+Standard Deviation From The Mean
 Star
 Star Fury
 Star Lord
@@ -846,6 +891,7 @@ Stellaris
 Stellarum
 Stingray
 Sturgeon
+Subsequent To The Warning
 Sun God
 Sunburst
 Sunship
@@ -868,12 +914,15 @@ Tempest
 Tempest Class  
 Tempest II
 Tempest TGR-44
+Terms And Conditions Apply
 Terms And Conditions May Apply 
 Terra Nova
 That Escalated Quickly 
+That's A Tomorrow Problem
 That's Not My Department 
 The Achilles Gambit
 The Answer Is Obvious 
+The Arrow Of Time Has A Quiver
 The Big Papi
 The Black Pearl
 The City
@@ -882,15 +931,20 @@ The City Ships of Delta
 The City Ships of Zeta
 The Consequence Of Waking Up 
 The Courtesy Of A Quick End 
+The Feeling Of Being Watched
 The Fleet of Fennus
 The Galaxy
+The Kindness Of Strangers
 The Last Thing You'll Never See 
+The Logic Of Small Things
 The Logic Of Unfinished Things 
 The Orion IV (The Great Journey)
 The Orion Replica
 The Other
+The Path Of Least Resistance
 The Problem Is Now Resolved 
 The Sanguine
+The Scenic Route Was Worth It
 The Shape Of The Argument 
 The Ships of Earth
 The ships of the Alpha Colony
@@ -902,15 +956,23 @@ The Starfire Project
 The Starship Designs of Alpha
 The Starship Drake
 The Starship Orion
+The Sum Of All Our Choices
 The Sum Of All Probabilities 
 The Weight Of Expectation 
 There Will Be No Second Warning 
 Things Could Always Be Worse 
 This Concludes The Negotiation 
+This Conversation Is Over
 This Counts As A Warning 
 This Is Going To Be Expensive 
+This Is Going To Escalate Quickly
+This Is My Good Side
 This Is Not A Drill 
+This Is The Easy Way (For Me)
 This Is The Part Where It Gets Interesting 
+This Is Why We Can't Have Nice Things
+This Will All Make Sense Later
+This Will Not End Well (For You)
 Thunder Child
 Thunder Reel  
 Thunderbird
@@ -936,6 +998,7 @@ Umbra
 Umbra Sentinel  
 Unity's Promise
 Unresolved Variable 
+Unsolicited Advice
 Unsolicited Opinion
 Uranian Guard  
 Uranus
@@ -986,12 +1049,15 @@ Wayfarer's Hope
 Wayfinder
 We Both Know How This Ends 
 We Have Been Here Before 
+We've Been Over This
 Wedge
 Wendell
 Wendy
+What's The Worst That Could Happen?
 Wildfire
 Wolfsbane  
 Worcester
+Works On My Machine
 Wyvern
 X-15
 X-20
@@ -1016,10 +1082,13 @@ Yearning
 Yggdrasil
 Ymir Explorer  
 Ymir’s Hammer  
-You Get What You Pay For 
-You Had To Be There 
+You And Whose Army?
+You Get What You Pay For
+You Had To Be There
 You Should See The Other Guy 
 You Were Followed 
+You Were Warned
+Your Objections Have Been Noted
 Z
 Z-95
 Z-Craft Destroyer  
