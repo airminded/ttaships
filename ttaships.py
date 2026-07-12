@@ -5,6 +5,7 @@ import cloudinary.api
 import cloudinary.uploader
 import requests
 from io import BytesIO
+from datetime import datetime, timezone
 from mastodon import Mastodon
 from atproto import Client, client_utils
 from atproto_client.utils.text_builder import TextBuilder
@@ -100,7 +101,7 @@ def main():
 
     # Create threadgate to allow replies only from followers
     threadgate = models.AppBskyFeedThreadgate.Record(
-        created_at=models.string_formats.DateTime.now(),
+        created_at=datetime.now(timezone.utc).isoformat(),
         post='at://self/app.bsky.feed.post/temp',
         allow=[models.AppBskyFeedThreadgate.FollowerRule()]
     )
