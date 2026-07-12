@@ -5,6 +5,7 @@ import cloudinary.api
 import cloudinary.uploader
 import requests
 from io import BytesIO
+from datetime import datetime, timezone
 from mastodon import Mastodon
 from atproto import Client, client_utils
 from atproto_client.utils.text_builder import TextBuilder
@@ -98,14 +99,27 @@ def main():
     post = text_builder.build_text()
     facets = text_builder.build_facets()
 
-    # Post to Bluesky with image, aspect ratio, and specified facets
-    client.send_image(
+    # Post to Bluesky with image, aspect ratio, and facets
+    bluesky_post = client.send_image(
         text=post,
         image=image_data,
         image_alt='',
         image_aspect_ratio=aspect_ratio,
         facets=facets
     )
+
+    # Create threadgate to allow replies only from followers
+    threadgate_record = models.AppBskyFeedThreadgate.Record(
+        created_at=datetime.now(timezone.utc).isoformat(),
+        post=bluesky_post.uri,
+        allow=[models.AppBskyFeedThreadgate.FollowerRule()]
+    )
+
+    # Extract rkey from post URI for threadgate creation
+    rkey = bluesky_post.uri.split('/')[-1]
+    
+    # Create the threadgate
+    client.app.bsky.feed.threadgate.create(client.me.did, threadgate_record, rkey=rkey)
 
     # Delete image from Cloudinary
     cloudinary.uploader.destroy(name)
