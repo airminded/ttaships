@@ -99,8 +99,10 @@ def main():
     facets = text_builder.build_facets()
 
     # Create threadgate to allow replies only from followers
-    threadgate = models.AppBskyFeedThreadgate.ThreadgateDefs(
-        allow_followers=models.AppBskyFeedThreadgate.FollowersRule()
+    threadgate = models.AppBskyFeedThreadgate.Record(
+        created_at=models.string_formats.DateTime.now(),
+        post='at://self/app.bsky.feed.post/temp',
+        allow=[models.AppBskyFeedThreadgate.FollowerRule()]
     )
 
     # Post to Bluesky with image, aspect ratio, facets, and threadgate
