@@ -75,8 +75,9 @@ def main():
     post_bluesky = f"{shipname} does not exist "
 
     # Post to Mastodon with image
-    mastodon.media_post(image)
-    mastodon.status_post(post_mastodon, media_ids=[mastodon.media_post(image)['id']])
+    with open(image, 'rb') as img_file:
+        media = mastodon.media_post(img_file, mime_type='image/png')
+    mastodon.status_post(post_mastodon, media_ids=[media['id']])
 
     # Convert png to jpg for Bluesky
     with Image.open(image) as img:
