@@ -98,13 +98,19 @@ def main():
     post = text_builder.build_text()
     facets = text_builder.build_facets()
 
-    # Post to Bluesky with image, aspect ratio, and specified facets
+    # Create threadgate to allow replies only from followers
+    threadgate = models.AppBskyFeedThreadgate.ThreadgateDefs(
+        allow_followers=models.AppBskyFeedThreadgate.FollowersRule()
+    )
+
+    # Post to Bluesky with image, aspect ratio, facets, and threadgate
     client.send_image(
         text=post,
         image=image_data,
         image_alt='',
         image_aspect_ratio=aspect_ratio,
-        facets=facets
+        facets=facets,
+        threadgate=threadgate
     )
 
     # Delete image from Cloudinary
